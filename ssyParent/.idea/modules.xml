@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../ssyApp/ssyApp.iml" filepath="$PROJECT_DIR$/../ssyApp/ssyApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ssyCommon/ssyCommon.iml" filepath="$PROJECT_DIR$/../ssyCommon/ssyCommon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ssyDoc/ssyDoc.iml" filepath="$PROJECT_DIR$/../ssyDoc/ssyDoc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ssyManager/ssyManager.iml" filepath="$PROJECT_DIR$/../ssyManager/ssyManager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssyParent.iml" filepath="$PROJECT_DIR$/ssyParent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ssyResource/ssyResource.iml" filepath="$PROJECT_DIR$/../ssyResource/ssyResource.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ssyResourceApi/ssyResourceApi.iml" filepath="$PROJECT_DIR$/../ssyResourceApi/ssyResourceApi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ssyWx/ssyWx.iml" filepath="$PROJECT_DIR$/../ssyWx/ssyWx.iml" />
+    </modules>
+  </component>
+</project>

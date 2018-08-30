@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: ssy
+  datasource:
+    username: root
+    password: test1104WDY
+    url: jdbc:mysql://123.56.74.15/wd_eqp?characterEncoding=utf8&useSSL=false

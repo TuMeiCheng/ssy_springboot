@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/../ssyApp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ssyCommon" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ssyDoc" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ssyManager" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ssyResource" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ssyResourceApi" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ssyWx" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>
