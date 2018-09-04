@@ -6,6 +6,10 @@
         <element id="directory" name="classes">
           <element id="module-output" name="ssyWx" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: com.wande:ynm3k:1.0" />
+          <element id="library" level="project" name="Maven: org.projectlombok:lombok:1.16.22" />
+        </element>
       </element>
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/../ssyWx/target/ssyWx-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" />

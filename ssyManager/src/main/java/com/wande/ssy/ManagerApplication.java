@@ -1,6 +1,8 @@
 package com.wande.ssy;
 
 
+import com.alibaba.dubbo.config.annotation.Reference;
+import com.wande.ssy.dubbo.provider.service.IUserBussness;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -8,9 +10,6 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 import org.springframework.context.annotation.ImportResource;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.alibaba.dubbo.config.annotation.Reference;
-import com.wande.ssy.dubbo.provider.service.IUserBussness;
 
 @SpringBootApplication
 @RestController
@@ -25,9 +24,10 @@ public class ManagerApplication extends SpringBootServletInitializer {
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
         return application.sources(ManagerApplication.class);	
     }
+
+
     @Reference(interfaceClass=IUserBussness.class)
     private IUserBussness userBussness;
-
     @RequestMapping("/")
     public Object getInfo(Integer userId){
     	System.out.println("test");

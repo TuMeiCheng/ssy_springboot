@@ -43,8 +43,10 @@ public class ActiveRecordPluginConfig {
 		JfinalORM.mapping(arp);
 		arp.setShowSql(false);
 
+
+
 		arp.getEngine().setSourceFactory(new ClassPathSourceFactory());
-//		arp.addSqlTemplate("/sql/all_sqls.sql");
+		arp.addSqlTemplate("all.sql");
 		// 必须手动调用start
 		arp.start();
 		return arp;

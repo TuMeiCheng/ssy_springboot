@@ -28,6 +28,20 @@
 		<module>../ssyWx</module>
 		<module>../ssyDoc</module>
 	</modules>
+
+	<dependencies>
+		<!-- 导入ynm3k包-->
+		<dependency>
+			<groupId>com.wande</groupId>
+			<artifactId>ynm3k</artifactId>
+			<version>1.0</version>
+		</dependency>
+
+		<!--lombok支持-->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>	</dependencies>
 	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
