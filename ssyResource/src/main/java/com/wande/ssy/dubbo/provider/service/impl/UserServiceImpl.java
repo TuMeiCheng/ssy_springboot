@@ -1,34 +1,40 @@
-package com.wande.ssy.dubbo.provider.service;
+package com.wande.ssy.dubbo.provider.service.impl;
 
 import com.alibaba.dubbo.config.annotation.Service;
-import com.alibaba.fastjson.JSON;
+import com.wande.ssy.dao.UserDao;
+import com.wande.ssy.dubbo.provider.service.UserService;
 import com.wande.ssy.entity.Admin;
-import com.wande.ssy.entity.*;
+import com.wande.ssy.entity.Item;
+import com.wande.ssy.entity.User;
 import com.ynm3k.mvc.model.DataPage;
 import com.ynm3k.mvc.model.RespWrapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Map;
 
-@Service(interfaceClass = IUserBussness.class)
-public class UserBussnessImpl implements IUserBussness {
+@Component
+@Service(interfaceClass = UserService.class)
+public class UserServiceImpl implements UserService {
 
-	public String getInfo(Integer userId) {
-		Log l = new Log().findById(17);
-		System.out.println(JSON.toJSONString(new Log().findById(17)));
-		return "用户信息:" + userId;
-	}
+	@Autowired
+	private UserDao userDao;
 
+
+	/* 添加用户
+	 * @param: [obj, pwd]
+	 * @return: com.ynm3k.mvc.model.RespWrapper<java.lang.Long> */
 	@Override
-	public RespWrapper<Long> addUser(User obj, String pwd) {
-		User user = new User().findFirst("SELECT * FROM eqp_user where phone = ?",obj.getPhone());
-		if (user != null) {
-			System.out.println("该手机已经注册");
+	public RespWrapper<User> addUser(User user) {
+		if (this.userDao.checkUserPhone(user.getPhone())) {
 			return RespWrapper.makeResp(1001, "该手机账号已经存在!", null);
 		}
 		//否则保存到数据库
-		System.out.println("可以注册");
-		return RespWrapper.makeResp(1001, "该手机账号可以注册!", null);
+		Boolean bln = this.userDao.addUser(user);
+		System.out.println(bln);
+
+		return RespWrapper.makeResp(0, "成功添加系统账号："+user.getPhone(), user);
 	}
 
 	@Override

@@ -2,7 +2,8 @@ package com.wande.ssy;
 
 
 import com.alibaba.dubbo.config.annotation.Reference;
-import com.wande.ssy.dubbo.provider.service.IUserBussness;
+import com.wande.ssy.dubbo.provider.service.UserService;
+import com.wande.ssy.entity.User;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -10,6 +11,8 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 import org.springframework.context.annotation.ImportResource;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.validation.Valid;
 
 @SpringBootApplication
 @RestController
@@ -22,16 +25,17 @@ public class ManagerApplication extends SpringBootServletInitializer {
 
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(ManagerApplication.class);	
+        return application.sources(ManagerApplication.class);
     }
 
 
-    @Reference(interfaceClass=IUserBussness.class)
-    private IUserBussness userBussness;
+    @Reference(interfaceClass=UserService.class)
+    private UserService userService;
+
     @RequestMapping("/")
-    public Object getInfo(Integer userId){
+    public Object getInfo(@Valid User user){
     	System.out.println("test");
-        return userBussness.getInfo(userId);
+        return userService.addUser(user);
     }
 	
 }

@@ -20,8 +20,16 @@
 			<artifactId>jfinal</artifactId>
 			<version>3.3</version>
 		</dependency>
+		<dependency>
+			<groupId>javax.validation</groupId>
+			<artifactId>validation-api</artifactId>
+		</dependency>
+        <dependency>
+            <groupId>org.hibernate.validator</groupId>
+            <artifactId>hibernate-validator</artifactId>
+        </dependency>
 
-	</dependencies>
+    </dependencies>
 
 
 </project>

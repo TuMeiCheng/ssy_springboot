@@ -66,7 +66,7 @@ public class ResourceApplication extends SpringBootServletInitializer {
 		u.setName("张大大");
 		u.setCreateBy(32);
 		u.setSkey(22222);
-		u.setPwd("SDKGW424252");
+		u.setPassword("SDKGW424252");
 		u.setStatus(1);
 		u.setCreateBy(323);
 		u.setCreateTime(new Date().getTime());
@@ -101,7 +101,10 @@ public class ResourceApplication extends SpringBootServletInitializer {
 		System.out.println(JSON.toJSONString(l.toRecord().getColumns()));
 		Record r1 = Db.findFirst("select * from eqp_log where logId = "+17);
 		System.out.println(r1);
-		return Ret.ok("data", JSON.toJSON(r1.getColumns())).set("msg", "成功").set("data1",JSON.toJSONString(l.toRecord().getColumns())).set("data2", l);
+		return Ret.ok("data", JSON.toJSON(r1.getColumns()))
+				.set("msg", "成功")
+				.set("data1",JSON.toJSONString(l.toRecord().getColumns()))
+				.set("data2", l);
 	}
 
 	@RequestMapping("/addUser")

@@ -1,6 +1,11 @@
 package com.wande.ssy.entity;
 
 import com.jfinal.plugin.activerecord.Model;
+import org.hibernate.validator.constraints.NotEmpty;
+
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 
 
 public class User extends Model<User>{
@@ -9,7 +14,7 @@ public class User extends Model<User>{
     private long   uin;			// userId
     private long   agencyId;	// 管理公司ID
     private String phone;		// APP用户手机号
-    private String pwd;         //密码
+    private String password;     //密码
     private  Integer skey;      //随机因子
     private String name;		// 用户名称
     private String img;			// 头像
@@ -40,6 +45,9 @@ public class User extends Model<User>{
         set("agencyId",agencyId);
     }
 
+    @NotEmpty(message = "手机号码必填")
+    @Pattern(regexp = "^(((13[0-9]{1})|(15[0-9]{1})|(17[6-8]{1})|(14[5-7]{1})|(18[0-9]{1}))+\\d{8})$"
+            ,message = "请输入正确的手机号！")
     public String getPhone() {
         return get("phone");
     }
@@ -48,13 +56,16 @@ public class User extends Model<User>{
         set("phone",phone);
     }
 
-    public String getPwd() {
+    @NotBlank(message = "密码必填")
+    @Size(min=6, max=16,message = "必须输入长度在6-16之间的密码!")
+    public String getPassword() {
         return get("pwd");
     }
 
-    public void setPwd(String pwd) {
+    public void setPassword(String pwd) {
         set("pwd",pwd);
     }
+
 
     public Integer getSkey() {
         return get("skey");
@@ -64,6 +75,7 @@ public class User extends Model<User>{
         set("skey",skey);
     }
 
+    @NotEmpty(message = "名称必填")
     public String getName() {
         return get("name");
     }
