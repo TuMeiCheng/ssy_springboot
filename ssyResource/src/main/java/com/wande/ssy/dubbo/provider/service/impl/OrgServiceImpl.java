@@ -19,6 +19,7 @@ public class OrgServiceImpl implements OrgService {
 
     @Override
     public RespWrapper<Integer> addOrg(Org obj) {
+        orgDao.getOrgIdsByPid(2);
         return null;
     }
 

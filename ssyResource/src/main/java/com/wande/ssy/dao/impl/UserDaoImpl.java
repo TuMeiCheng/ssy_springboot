@@ -16,6 +16,14 @@ public class UserDaoImpl implements UserDao {
         return  user.save();
     }
 
+    /* 更新 user
+     * @param: [user]
+     * @return: java.lang.Boolean */
+    @Override
+    public Boolean updateUser(User user) {
+        return  user.update();
+    }
+
     /* 检查手机是否注册过
      * @param: [phone]
      * @return: java.lang.Boolean */

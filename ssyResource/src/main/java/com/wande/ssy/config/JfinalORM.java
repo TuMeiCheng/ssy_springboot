@@ -9,7 +9,7 @@ public class JfinalORM {
 
 	public static void mapping(ActiveRecordPlugin arp) {
 	
-		arp.addMapping("eqp_user", User.class);
+		arp.addMapping("eqp_user","uin", User.class);
 
 	    arp.addMapping("eqp_log", "logId", Log.class);
 

@@ -4,48 +4,48 @@ import com.jfinal.plugin.activerecord.Model;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
-
 public class User extends Model<User>{
-    private static final long serialVersionUID = 2412053097856391192L;
+    private static final Long serialVersionUID = 2412053097856391192L;
 
-    private long   uin;			// userId
-    private long   agencyId;	// 管理公司ID
+    private Long   uin;			// userId
+    private Integer   agencyId;	// 管理公司ID
     private String phone;		// APP用户手机号
     private String password;     //密码
-    private  Integer skey;      //随机因子
+    private Integer skey;      //随机因子
     private String name;		// 用户名称
     private String img;			// 头像
-    private int    status;		// 状态 0可用  10冻结 20删除
-    private long   loginTime;	// 登录时间
-    private long   createTime;	// 创建时间
-    private long   createBy;	// 创建人
-    private long   modifyTime;	// 修改时间
-    private long   modifyBy;	// 最后修改人
+    private Integer    status;		// 状态 0可用  10冻结 20删除
+    private Integer   loginTime;	// 登录时间
+    private Long   createTime;	// 创建时间
+    private Integer   createBy;	// 创建人
+    private Long   modifyTime;	// 修改时间
+    private Integer   modifyBy;	// 最后修改人
 
     //====================================================================================================
 
 
-
-    public long getUin() {
+    @NotNull(message = "uin不能为空")
+    public Long getUin() {
         return get("uin");
     }
 
-    public void setUin(long uin) {
+    public void setUin(Long uin) {
         set("uin",uin);
     }
 
-    public long getAgencyId() {
+    public Integer getAgencyId() {
         return get("agencyId");
     }
 
-    public void setAgencyId(long agencyId) {
+    public void setAgencyId(Integer agencyId) {
         set("agencyId",agencyId);
     }
 
-    @NotEmpty(message = "手机号码必填")
+    @NotNull(message = "手机号码必填")
     @Pattern(regexp = "^(((13[0-9]{1})|(15[0-9]{1})|(17[6-8]{1})|(14[5-7]{1})|(18[0-9]{1}))+\\d{8})$"
             ,message = "请输入正确的手机号！")
     public String getPhone() {
@@ -65,7 +65,6 @@ public class User extends Model<User>{
     public void setPassword(String pwd) {
         set("pwd",pwd);
     }
-
 
     public Integer getSkey() {
         return get("skey");
@@ -92,51 +91,52 @@ public class User extends Model<User>{
         set("img",img);
     }
 
-    public int getStatus() {
+    @NotNull(message = "状态不能为空")
+    public Integer getStatus() {
         return get("status");
     }
 
-    public void setStatus(int status) {
+    public void setStatus(Integer status) {
         set("status",status);
     }
 
-    public long getLoginTime() {
+    public Integer getLoginTime() {
         return get("loginTime");
     }
 
-    public void setLoginTime(long loginTime) {
+    public void setLoginTime(Integer loginTime) {
         set("loginTime",loginTime);
     }
 
-    public long getCreateTime() {
+    public Long getCreateTime() {
         return get("createTime");
     }
 
-    public void setCreateTime(long createTime) {
+    public void setCreateTime(Long createTime) {
         set("createTime",createTime);
     }
 
-    public long getCreateBy() {
+    public Integer getCreateBy() {
         return get("createBy");
     }
 
-    public void setCreateBy(long createBy) {
+    public void setCreateBy(Integer createBy) {
         set("createBy",createBy);
     }
 
-    public long getModifyTime() {
+    public Long getModifyTime() {
         return get("modifyTime");
     }
 
-    public void setModifyTime(long modifyTime) {
+    public void setModifyTime(Long modifyTime) {
         set("modifyTime",modifyTime);
     }
 
-    public long getModifyBy() {
+    public Integer getModifyBy() {
         return get("modifyBy");
     }
 
-    public void setModifyBy(long modifyBy) {
+    public void setModifyBy(Integer modifyBy) {
         set("modifyBy",modifyBy);
     }
 }

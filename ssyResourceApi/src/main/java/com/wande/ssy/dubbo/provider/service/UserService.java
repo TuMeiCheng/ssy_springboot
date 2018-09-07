@@ -22,7 +22,7 @@ public interface UserService {
 	 * @param obj	User对象
 	 * @return RespWrapper
 	 */
-	 RespWrapper<User> addUser(User obj);
+	 RespWrapper<Boolean> addUser(User obj);
 	
 	/**
 	 * 更新APP用户信息

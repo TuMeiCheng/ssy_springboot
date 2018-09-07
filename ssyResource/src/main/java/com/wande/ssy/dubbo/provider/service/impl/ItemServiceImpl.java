@@ -20,6 +20,10 @@ public class ItemServiceImpl implements ItemService {
 
     @Override
     public RespWrapper<Boolean> addItem(Item obj) {
+        Admin admin = new Admin();
+        admin.setRoleId(3);
+        admin.setOrgId(3);
+        this.itemDao.getItemList(admin);
         return null;
     }
 
