@@ -30,7 +30,19 @@ public class OrgServiceImpl implements OrgService {
 
     @Override
     public RespWrapper<Org> getOneOrg(int orgId) {
-        return null;
+
+        try {
+            Org obj = this.orgDao.getOneOrg(orgId);
+            if (obj != null) {
+                return RespWrapper.makeResp(0, "", obj);
+            } else {
+                return RespWrapper.makeResp(1001, "该体育局不存在!", null);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return RespWrapper.makeResp(1001, "系统繁忙!", null);
+        }
+
     }
 
     @Override

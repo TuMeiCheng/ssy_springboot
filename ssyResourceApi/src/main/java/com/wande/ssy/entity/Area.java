@@ -2,6 +2,8 @@ package com.wande.ssy.entity;
 
 import com.jfinal.plugin.activerecord.Model;
 
+import javax.validation.constraints.NotNull;
+
 public class Area extends Model<Area> {
 
     private Integer areaId;       		// 场地ID
@@ -19,6 +21,8 @@ public class Area extends Model<Area> {
     private Long modifyTime;		    // 修改时间
     private Integer modifyBy;			// 最后修改人
 
+    private int    areaType;        //场地类别，1室外，2室内，3，公园
+
     private String qrcode;              // 场地二维码
     private Integer status;     	    // 场地状态,0未安装,1正常,2报修,3报废   具体代码不代表真实业务
     private Integer flowBy;			    // 巡检人ID
@@ -26,8 +30,29 @@ public class Area extends Model<Area> {
     private Integer qrcodeType;         // 场地管理方式  1 器材码管理   2场地码管理
 
 
+    public String getRegionName(){
+        return getStr("regionName");
+    }
+
+    public String getOrgName(){
+        return getStr("orgName");
+    }
+
+    public String getProvideWayName(){
+        return getStr("provideWayName");
+    }
+
+    public String getAreaTypeName(){ return getStr("areaTypeName");}
+
+    public String getUrl(){
+        return getStr("url");
+    }
+
 
     //==========================================================================================================
+
+
+    @NotNull(message = "场地管理方式必需选择!")
     public Integer getQrcodeType(){
         return getInt("qrcodeType");
     }
@@ -36,19 +61,19 @@ public class Area extends Model<Area> {
         set("qrcodeType", qrcodeType);
     }
 
-    public Integer getFlowBy() {
+    public Long getFlowBy() {
         return get("flowBy");
     }
 
-    public void setFlowBy(long flowBy) {
+    public void setFlowBy(Long flowBy) {
         set("flowBy", flowBy);
     }
 
-    public Integer getRepairBy() {
+    public Long getRepairBy() {
         return get("repairBy");
     }
 
-    public void setRepairBy(long repairBy) {
+    public void setRepairBy(Long repairBy) {
         set("repairBy", repairBy);
     }
 
@@ -68,6 +93,7 @@ public class Area extends Model<Area> {
         set("status", status);
     }
 
+    @NotNull(message = "场地id不能为空！")
     public Integer getAreaId() {
         return getInt("areaId");
     }
@@ -76,6 +102,7 @@ public class Area extends Model<Area> {
         set("areaId", areaId);
     }
 
+    @NotNull(message = "管辖机构ID不能为空!")
     public Integer getOrgId() {
         return getInt("orgId");
     }
@@ -92,6 +119,7 @@ public class Area extends Model<Area> {
         set("agencyId", agencyId);
     }
 
+    @NotNull(message = "提供方式不能为空!")
     public Integer getProvideWay() {
         return getInt("provideWay");
     }
@@ -100,6 +128,7 @@ public class Area extends Model<Area> {
         set("provideWay", provideWay);
     }
 
+    @NotNull(message = "地点名称不能为空!")
     public String getName() {
         return getStr("name");
     }
@@ -114,6 +143,7 @@ public class Area extends Model<Area> {
     public void setRegionFullName(String regionFullName) {
         set("regionFullName", regionFullName);
     }
+    @NotNull(message = "行政区域ID(外键)不能为空!")
     public Integer getRegionId() {
         return getInt("regionId");
     }
@@ -122,6 +152,7 @@ public class Area extends Model<Area> {
         set("regionId", regionId);
     }
 
+    @NotNull(message = "经度值不能为空!")
     public Double getLongitude() {
         return getDouble("longitude");
     }
@@ -130,6 +161,7 @@ public class Area extends Model<Area> {
         set("longitude", longitude);
     }
 
+    @NotNull(message = "纬度值不能为空!")
     public Double getLatitude() {
         return getDouble("latitude");
     }
@@ -138,6 +170,7 @@ public class Area extends Model<Area> {
         set("latitude", latitude);
     }
 
+    @NotNull(message = "巡检范围不能为空!")
     public Integer getCheckRange() {
         return getInt("checkRange");
     }
@@ -176,6 +209,15 @@ public class Area extends Model<Area> {
 
     public void setModifyBy(long modifyBy) {
         set("modifyBy", modifyBy);
+    }
+
+    @NotNull(message = "场地分类必需选择!")
+    public Integer getAreaType() {
+        return get("areaType");
+    }
+
+    public void setAreaType(int areaType) {
+        set("areaType",areaType);
     }
 
 }

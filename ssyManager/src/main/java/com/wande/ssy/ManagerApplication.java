@@ -34,7 +34,6 @@ public class ManagerApplication extends SpringBootServletInitializer {
 
     @RequestMapping("/")
     public Object getInfo(@Valid User user){
-    	System.out.println("test");
         return userService.addUser(user);
     }
 	

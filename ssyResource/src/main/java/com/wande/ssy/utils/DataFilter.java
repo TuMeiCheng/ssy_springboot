@@ -28,9 +28,8 @@ public class DataFilter {
 		if (admin.getRoleId() == AdminRole.AGENCY.getValue()) {
 			return " and (a.agencyId=" + admin.getUin() + ")";
 		} else if (admin.getRoleId() == AdminRole.ORG.getValue()){
-			int orgId = admin.getOrgId();
 			//return " and a.orgId in(" + StringUtil.encodeSQL(orgManager.getOrgIdsByPid(orgId)) + ")";
-			return " and a.orgId in(" + StringUtil.encodeSQL(orgDao.getOrgIdsByPid(orgId)) + ")";
+			return " and a.orgId in(" + StringUtil.encodeSQL(orgDao.getOrgIdsByPid(admin.getOrgId())) + ")";
 		} else {
 			return "";
 		}
@@ -45,8 +44,7 @@ public class DataFilter {
 		if (admin.getRoleId() == AdminRole.AGENCY.getValue()) {
 			return " and (agencyId=" + admin.getUin() + ")";
 		} else if (admin.getRoleId() == AdminRole.ORG.getValue()){
-			int orgId = admin.getOrgId();
-			return " and orgId in(" + StringUtil.encodeSQL(orgDao.getOrgIdsByPid(orgId)) + ")";
+			return " and orgId in(" + StringUtil.encodeSQL(orgDao.getOrgIdsByPid(admin.getOrgId())) + ")";
 		} else {
 			return "";
 		}

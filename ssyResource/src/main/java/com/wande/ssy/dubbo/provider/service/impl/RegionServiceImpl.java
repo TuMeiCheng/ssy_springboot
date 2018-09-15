@@ -30,7 +30,17 @@ public class RegionServiceImpl implements RegionService {
 
     @Override
     public RespWrapper<Region> getOneRegion(int regionId) {
-        return null;
+        try {
+            Region obj = regionDao.getOneRegion(regionId);
+            if (obj != null) {
+                return RespWrapper.makeResp(0, "", obj);
+            } else {
+                return RespWrapper.makeResp(1001, "该地区表不存在!", null);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return RespWrapper.makeResp(1001, "系统繁忙!", null);
     }
 
     @Override

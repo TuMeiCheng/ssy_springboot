@@ -4,10 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.jfinal.kit.Kv;
 import com.jfinal.kit.Ret;
 import com.jfinal.plugin.activerecord.*;
-import com.wande.ssy.entity.Area;
-import com.wande.ssy.entity.Eqp;
-import com.wande.ssy.entity.Log;
-import com.wande.ssy.entity.User;
+import com.wande.ssy.entity.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -64,11 +61,11 @@ public class ResourceApplication extends SpringBootServletInitializer {
 		User u = new User();
 		u.setPhone("13452900610");
 		u.setName("张大大");
-		u.setCreateBy(32);
+		u.setCreateBy(32L);
 		u.setSkey(22222);
 		u.setPassword("SDKGW424252");
 		u.setStatus(1);
-		u.setCreateBy(323);
+		u.setCreateBy(323L);
 		u.setCreateTime(new Date().getTime());
 		System.out.println(u.getName()+"大傻逼");
 		System.out.println(u.toRecord().toString()+"eeeeeeeeeee");
@@ -137,6 +134,20 @@ public class ResourceApplication extends SpringBootServletInitializer {
 		System.out.println(eqp.getModifyTime());
 		return eqp.toJson();
 	}
+
+	@RequestMapping("/test")
+	public Object addeqp(Integer uin){
+		Admin admin = new Admin();
+		Admin aa = admin.findById(uin);
+		System.out.println("我是aa:"+aa.toString());
+
+		if (admin ==null) {
+			System.out.println("查询不到");
+		}
+
+		return admin;
+	}
+
 
 
 }

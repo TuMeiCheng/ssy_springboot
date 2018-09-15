@@ -102,4 +102,5 @@ public interface UserService {
 	 * @return
 	 */
 	 RespWrapper<List<User>> getUserListInIds(String userIds);
+
 }

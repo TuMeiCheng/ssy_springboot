@@ -23,10 +23,8 @@ public class ResultJson {
     }
 
     public static Ret ReturnJson(RespWrapper respWrapper){
-
         return  Ret.ok("obj", ModelConvertUtil(respWrapper.getObj()))
                 .set("errMsg", respWrapper.getErrMsg())
                 .set("errCode",respWrapper.getErrCode());
-
     }
 }

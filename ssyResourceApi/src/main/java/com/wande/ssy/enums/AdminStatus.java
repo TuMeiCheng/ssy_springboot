@@ -15,19 +15,19 @@ public enum AdminStatus {
 	NORMAL(0, "正常"),	// 0正常
 	BAN(10, "冻结");		// 10禁用
 	
-	private int value;
+	private Integer value;
 	private String name;
 	
-	private AdminStatus(int value, String name) {
+	private AdminStatus(Integer value, String name) {
 		this.value = value;
 		this.name = name;
 	}
 
-	public int getValue() {
+	public Integer getValue() {
 		return value;
 	}
 
-	public void setValue(int value) {
+	public void setValue(Integer value) {
 		this.value = value;
 	}
 
@@ -44,7 +44,7 @@ public enum AdminStatus {
 	 * @param value
 	 * @return
 	 */
- 	public static String getName(int value) {
+ 	public static String getName(Integer value) {
  		for (AdminStatus s : AdminStatus.values()) {
  			if (s.getValue() == value) {
  				return s.name;

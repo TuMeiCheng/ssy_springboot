@@ -6,62 +6,62 @@ public class Item extends Model<Item> {
 
     private static final long serialVersionUID = -292387099475224462L;
 
-    private Integer    itemId;		// 器材ID
-    private Integer    orgId;		// 管辖机构ID
-    private Integer   agencyId;	// 管理公司ID
-    private Integer    areaId;		// 场地ID
+    private Long    itemId;		// 器材ID
+    private Long    orgId;		// 管辖机构ID
+    private Long   agencyId;	// 管理公司ID
+    private Long    areaId;		// 场地ID
     private String url;			// URL路径
     private String qzcode;		// 二维码前缀
     private String itemsn;		// 器材编号
-    private Integer    eqpsortId;	// 器材分类ID
-    private Integer    eqpId;		// 器材ID
-    private Integer    supplierId;	// 供应商ID
+    private Long    eqpsortId;	// 器材分类ID
+    private Long    eqpId;		// 器材ID
+    private Long    supplierId;	// 供应商ID
     private Long   installTime;	// 安装时间
     private Long   expireTime;	// 到期时间
-    private Integer    standardcode;// 器材标准:0表示无,1无标准 2老国际 3新国际
-    private Integer    provideWay;	// 提供方式 0为无  1 政府提供 2自建 3未知
-    private Integer   flowBy;		// 巡检人ID
-    private Integer   repairBy;	// 维修人ID
-    private Integer    status;		// 器材状态,0未安装,1正常,2报修,3报废
-    private Integer    isdel;		// 软删除标志 0正常 1删除
+    private Long    standardcode;// 器材标准:0表示无,1无标准 2老国际 3新国际
+    private Long    provideWay;	// 提供方式 0为无  1 政府提供 2自建 3未知
+    private Long   flowBy;		// 巡检人ID
+    private Long   repairBy;	// 维修人ID
+    private Long    status;		// 器材状态,0未安装,1正常,2报修,3报废
+    private Long    isdel;		// 软删除标志 0正常 1删除
     private Long   createTime;	// 创建时间
-    private Integer   createBy;	// 创建人
+    private Long   createBy;	// 创建人
     private Long   modifyTime;	// 修改时间
-    private Integer   modifyBy;	// 最后修改人
-    private Integer    itemType;       //'1器材码管理, 2产地码管理'
+    private Long   modifyBy;	// 最后修改人
+    private Long   itemType;       //'1器材码管理, 2产地码管理'
 
 
 //=================================================================================================
 
-    public Integer getItemId(){
+    public Long getItemId(){
         return get("ItemId");
     }
 
-    public void setItemId(Integer itemId){
+    public void setItemId(Long itemId){
         set("itemId",itemId);
     }
 
-    public Integer getOrgId() {
+    public Long getOrgId() {
         return get("orgId"); 
     }
 
-    public void setOrgId(Integer orgId) {
+    public void setOrgId(Long orgId) {
         set("orgId",orgId);
     }
 
-    public Integer getAgencyId() {
+    public Long getAgencyId() {
         return get("agencyId"); 
     }
 
-    public void setAgencyId(Integer agencyId) {
+    public void setAgencyId(Long agencyId) {
         set("agencyId",agencyId);
     }
 
-    public Integer getAreaId() {
+    public Long getAreaId() {
         return get("areaId");
     }
 
-    public void setAreaId(Integer areaId) {
+    public void setAreaId(Long areaId) {
         set("areaId",areaId);
     }
 
@@ -89,27 +89,27 @@ public class Item extends Model<Item> {
         set("itemsn",itemsn);
     }
 
-    public Integer getEqpsortId() {
+    public Long getEqpsortId() {
         return get("eqpsortId");
     }
 
-    public void setEqpsortId(Integer eqpsortId) {
+    public void setEqpsortId(Long eqpsortId) {
         set("eqpsortId",eqpsortId);
     }
 
-    public Integer getEqpId() {
+    public Long getEqpId() {
         return get("eqpId"); 
     }
 
-    public void setEqpId(Integer eqpId) {
+    public void setEqpId(Long eqpId) {
         set("eqpId",eqpId);
     }
 
-    public Integer getSupplierId() {
+    public Long getSupplierId() {
         return get("supplierId"); 
     }
 
-    public void setSupplierId(Integer supplierId) {
+    public void setSupplierId(Long supplierId) {
         set("supplierId",supplierId);
     }
 
@@ -129,51 +129,51 @@ public class Item extends Model<Item> {
         set("expireTime",expireTime);
     }
 
-    public Integer getStandardcode() {
+    public Long getStandardcode() {
         return get("standardcode"); 
     }
 
-    public void setStandardcode(Integer standardcode) {
+    public void setStandardcode(Long standardcode) {
         set("standardcode",standardcode);
     }
 
-    public Integer getProvideWay() {
+    public Long getProvideWay() {
         return get("provideWay"); 
     }
 
-    public void setProvideWay(Integer provideWay) {
+    public void setProvideWay(Long provideWay) {
         set("provideWay",provideWay);
     }
 
-    public Integer getFlowBy() {
+    public Long getFlowBy() {
         return get("flowBy"); 
     }
 
-    public void setFlowBy(Integer flowBy) {
+    public void setFlowBy(Long flowBy) {
         set("flowBy",flowBy);
     }
 
-    public Integer getRepairBy() {
+    public Long getRepairBy() {
         return get("repairBy"); 
     }
 
-    public void setRepairBy(Integer repairBy) {
+    public void setRepairBy(Long repairBy) {
         set("repairBy",repairBy);
     }
 
-    public Integer getStatus() {
+    public Long getStatus() {
         return get("status"); 
     }
 
-    public void setStatus(Integer status) {
+    public void setStatus(Long status) {
         set("status",status);
     }
 
-    public Integer getIsdel() {
+    public Long getIsdel() {
         return get("isdel"); 
     }
 
-    public void setIsdel(Integer isdel) {
+    public void setIsdel(Long isdel) {
         set("isdel",isdel);
     }
 
@@ -185,11 +185,11 @@ public class Item extends Model<Item> {
         set("createTime",createTime);
     }
 
-    public Integer getCreateBy() {
+    public Long getCreateBy() {
         return get("createBy"); 
     }
 
-    public void setCreateBy(Integer createBy) {
+    public void setCreateBy(Long createBy) {
         set("createBy",createBy);
     }
 
@@ -201,19 +201,19 @@ public class Item extends Model<Item> {
         set("modifyTime",modifyTime);
     }
 
-    public Integer getModifyBy() {
+    public Long getModifyBy() {
         return get("modifyBy");
     }
 
-    public void setModifyBy(Integer modifyBy) {
+    public void setModifyBy(Long modifyBy) {
         set("modifyBy",modifyBy);
     }
 
-    public Integer getItemType() {
+    public Long getItemType() {
         return get("itemType");
     }
 
-    public void setItemType(Integer itemType) {
+    public void setItemType(Long itemType) {
         set("itemType",itemType);
     }
 }

@@ -1,6 +1,7 @@
 package com.wande.ssy.dubbo.provider.service.impl;
 
 import com.alibaba.dubbo.config.annotation.Service;
+import com.wande.ssy.dao.ItemDao;
 import com.wande.ssy.dao.UserDao;
 import com.wande.ssy.dubbo.provider.service.UserService;
 import com.wande.ssy.entity.Admin;
@@ -17,6 +18,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 
 @Slf4j
 @Component
@@ -25,6 +27,9 @@ public class UserServiceImpl implements UserService {
 
 	@Autowired
 	private UserDao userDao;
+
+	@Autowired
+	private ItemDao itemDao;
 
 
 	/* 添加用户
@@ -37,8 +42,9 @@ public class UserServiceImpl implements UserService {
 		}
 		//封装数据
 		// TODO
-		//user.setAgencyId(admin.getUin());				// 管理公司ID
-		//user.setCreateBy(admin.getUin());				// 创建人
+		Random random = new Random();
+		int skey = random.nextInt();
+		user.setSkey(skey);
 		user.setStatus(AdminStatus.NORMAL.getValue());	// 状态 0 正常 10 禁用
 		user.setCreateTime(System.currentTimeMillis());	// 创建时间,毫秒
 
@@ -105,12 +111,18 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public RespWrapper<DataPage<User>> getUserByPage(Map<String, Object> params, int pageNo, int pageSize) {
-		return null;
+		return RespWrapper.makeResp(0, "", userDao.getUserByPage(params, pageNo, pageSize));
 	}
 
 	@Override
 	public RespWrapper<List<Item>> getItemBySelect(Admin admin) {
-		return null;
+		try {
+			List<Item>  itmes = this.itemDao.getItemList(admin);
+			return RespWrapper.makeResp(0, "获取user下拉选项成功", itmes);
+		}catch (Exception e){
+			log.info("获取user下拉选项失败 admin={}",admin.toString());
+			return RespWrapper.makeResp(1001, "获取user下拉选项失败：", null);
+		}
 	}
 
 	@Override
@@ -120,7 +132,13 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public RespWrapper<List<User>> getUserListInIds(String userIds) {
-		return null;
+		try {
+			List<User>  itmes = this.userDao.getUserListInIds(userIds);
+			return RespWrapper.makeResp(0, "根据ids获取用户列表成功", itmes);
+		}catch (Exception e){
+			log.info("获取user下拉选项失败 userIds={}",userIds);
+			return RespWrapper.makeResp(1001, "根据ids获取用户列表失败：", null);
+		}
 	}
 
 

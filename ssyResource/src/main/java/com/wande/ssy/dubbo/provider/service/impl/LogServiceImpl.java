@@ -19,7 +19,12 @@ public class LogServiceImpl implements LogService {
 
     @Override
     public RespWrapper<Boolean> addLog(Log obj) {
-        return null;
+            boolean rs = logDao.insert(obj);
+            if (rs) {
+                return RespWrapper.makeResp(0, "", rs);
+            } else {
+                return RespWrapper.makeResp(1001, "系统繁忙", null);
+            }
     }
 
     @Override

@@ -33,21 +33,19 @@ public class Log extends Model<Log>{
 	}
 
     public void setCode(String Code) { 
-		set("Code", Code);
+		set("code", Code);
 	}
 
 	public String getCode() {
-		return get("Code");
+		return get("code");
 	}
 
 	public int getLogId() {
 		return get("logId");
-		
 	}
 
 	public void setLogId(int logId) {
 		set("logId",logId);
-		
 	}
 
 	public String getDesc() {
@@ -57,36 +55,29 @@ public class Log extends Model<Log>{
 
 	public void setDesc(String desc) {
 		set("desc",desc);
-		
 	}
 
 	public String getAccount() {
 		return get("account");
-		
 	}
 
 	public void setAccount(String account) {
 		set("account",account);
-		
 	}
 
 	public String getIp() {
 		return get("ip");
-		
 	}
 
 	public void setIp(String ip) {
 		set("ip",ip);
-		
 	}
 
 	public void setCreateTime(long createTime) {
 		set("createTime",createTime);
-		
 	}
 
 	public void setCreateBy(Integer createBy) {
 		set("createBy",createBy);
-		
 	}
 }

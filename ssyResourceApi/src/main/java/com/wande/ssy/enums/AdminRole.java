@@ -16,19 +16,19 @@ public enum AdminRole {
 	AGENCY(2, "管理公司"),
 	ORG(3, "体育局");
 	
-	private int value;
+	private Integer value;
 	private String name;
 	
-	private AdminRole(int value, String name) {
+	private AdminRole(Integer value, String name) {
 		this.value = value;
 		this.name = name;
 	}
 
-	public int getValue() {
+	public Integer getValue() {
 		return value;
 	}
 
-	public void setValue(int value) {
+	public void setValue(Integer value) {
 		this.value = value;
 	}
 
@@ -45,7 +45,7 @@ public enum AdminRole {
 	 * @param value
 	 * @return
 	 */
- 	public static String getName(int value) {
+ 	public static String getName(Integer value) {
  		for (AdminRole s : AdminRole.values()) {
  			if (s.getValue() == value) {
  				return s.name;

@@ -30,7 +30,18 @@ public class SupplierServiceImpl implements SupplierService {
 
     @Override
     public RespWrapper<Supplier> getOneSupplier(int supplierId) {
-        return null;
+        try {
+            Supplier obj = this.supplierDao.getOneSupplier(supplierId);
+            if (obj != null) {
+                return RespWrapper.makeResp(0, "", obj);
+            } else {
+                return RespWrapper.makeResp(1001, "该器材供应商不存在!", null);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return RespWrapper.makeResp(1001, "系统繁忙!", null);
+
     }
 
     @Override

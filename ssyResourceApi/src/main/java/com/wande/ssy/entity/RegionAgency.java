@@ -10,7 +10,7 @@ public class RegionAgency extends Model<RegionAgency> {
 
     private Integer    id;			// 关联表
     private String regionIds;	// 代理商管理地区ids
-    private Integer   agencyId;	// 管理公司ID
+    private Long   agencyId;	// 管理公司ID
 
 
     public Integer getId() {
@@ -33,12 +33,12 @@ public class RegionAgency extends Model<RegionAgency> {
         
     }
 
-    public Integer getAgencyId() {
+    public Long getAgencyId() {
        return get("agencyId");
        
     }
 
-    public void setAgencyId(Integer agencyId) {
+    public void setAgencyId(Long agencyId) {
        set("agencyId",agencyId);
        
     }

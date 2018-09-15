@@ -2,6 +2,8 @@ package com.wande.ssy.entity;
 
 import com.jfinal.plugin.activerecord.Model;
 
+import javax.validation.constraints.NotNull;
+
 public class Eqp extends  Model<Eqp> {
 
     private String eqpId      = "eqpId";		// 器材库ID
@@ -21,6 +23,7 @@ public class Eqp extends  Model<Eqp> {
     private static final long serialVersionUID = -2078180361107464818L;
     public static final Eqp dao = new Eqp();
 
+    @NotNull(message = "器材id不能为空！")
     public Integer getEqpId() {
         return getInt(eqpId);
     }
@@ -29,6 +32,7 @@ public class Eqp extends  Model<Eqp> {
         set(this.eqpId, eqpId);
     }
 
+    @NotNull(message = "器材分类不能为空!")
     public Integer getEqpsortId() {
         return getInt(eqpsortId);
     }
@@ -44,6 +48,7 @@ public class Eqp extends  Model<Eqp> {
     public void setCatesn(String catesn) {
         set(this.catesn, catesn);
     }
+    @NotNull(message = "器材名称不能为空!")
     public String getName() {
         return getStr(name);
     }
@@ -51,6 +56,7 @@ public class Eqp extends  Model<Eqp> {
     public void setName(String name) {
         set(this.name, name);
     }
+    @NotNull(message = "所属供应商ID不能为空!")
     public Integer getSupplierId() {
         return getInt(supplierId);
     }
@@ -80,6 +86,8 @@ public class Eqp extends  Model<Eqp> {
     public void setVideoImg(String videoImg) {
         set(this.videoImg, videoImg);
     }
+
+    @NotNull(message = "器材状态不能为空！")
     public Integer getStatus() {
         return getInt(status);
     }
@@ -118,5 +126,14 @@ public class Eqp extends  Model<Eqp> {
 
     public void setModifyBy(long modifyBy) {
         set(this.modifyBy, modifyBy);
+    }
+
+    //=========================================================
+    public String  getSupplierName() {
+        return get("supplierName");
+    }
+
+    public String getEqpsortName() {
+        return get("eqpsortName");
     }
 }

@@ -21,7 +21,7 @@ public class User extends Model<User>{
     private Integer    status;		// 状态 0可用  10冻结 20删除
     private Integer   loginTime;	// 登录时间
     private Long   createTime;	// 创建时间
-    private Integer   createBy;	// 创建人
+    private Long   createBy;	// 创建人
     private Long   modifyTime;	// 修改时间
     private Integer   modifyBy;	// 最后修改人
 
@@ -37,7 +37,7 @@ public class User extends Model<User>{
         set("uin",uin);
     }
 
-    public Integer getAgencyId() {
+    public Long getAgencyId() {
         return get("agencyId");
     }
 
@@ -100,11 +100,11 @@ public class User extends Model<User>{
         set("status",status);
     }
 
-    public Integer getLoginTime() {
+    public Long getLoginTime() {
         return get("loginTime");
     }
 
-    public void setLoginTime(Integer loginTime) {
+    public void setLoginTime(Long loginTime) {
         set("loginTime",loginTime);
     }
 
@@ -116,11 +116,11 @@ public class User extends Model<User>{
         set("createTime",createTime);
     }
 
-    public Integer getCreateBy() {
+    public Long getCreateBy() {
         return get("createBy");
     }
 
-    public void setCreateBy(Integer createBy) {
+    public void setCreateBy(Long  createBy) {
         set("createBy",createBy);
     }
 
@@ -132,11 +132,15 @@ public class User extends Model<User>{
         set("modifyTime",modifyTime);
     }
 
-    public Integer getModifyBy() {
+    public Long getModifyBy() {
         return get("modifyBy");
     }
 
-    public void setModifyBy(Integer modifyBy) {
+    public void setModifyBy(Long modifyBy) {
         set("modifyBy",modifyBy);
+    }
+
+    public String getAgencyName(){
+        return get("agencyName");
     }
 }

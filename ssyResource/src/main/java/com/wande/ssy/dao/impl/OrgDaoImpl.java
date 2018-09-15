@@ -3,6 +3,7 @@ package com.wande.ssy.dao.impl;
 import com.jfinal.plugin.activerecord.Db;
 import com.jfinal.plugin.activerecord.Record;
 import com.wande.ssy.dao.OrgDao;
+import com.wande.ssy.entity.Org;
 import com.wande.ssy.utils.StringUtil;
 import org.springframework.stereotype.Repository;
 
@@ -31,6 +32,11 @@ public class OrgDaoImpl implements OrgDao {
         }
         String ids = idList.size() == 0 || idList == null ? "''" : StringUtil.join(idList, ",");
         return ids;
+    }
+
+    @Override
+    public Org getOneOrg(Integer id) {
+        return new Org().findById(id);
     }
 
 }

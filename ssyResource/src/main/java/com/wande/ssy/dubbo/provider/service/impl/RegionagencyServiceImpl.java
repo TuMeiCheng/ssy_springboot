@@ -16,6 +16,13 @@ public class RegionagencyServiceImpl implements RegionagencyService {
 
     @Override
     public RespWrapper<RegionAgency> getOneRegionagencyByAgencyId(long uin) {
-        return null;
+
+        RegionAgency ca = this.regionagencyDao.getOneRegionagency(uin);
+        if (ca == null) {
+            return RespWrapper.makeResp(1001, "不存在该信息!", null);
+        } else {
+            return RespWrapper.makeResp(0, "", ca);
+        }
+
     }
 }
