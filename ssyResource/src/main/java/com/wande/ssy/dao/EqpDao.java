@@ -22,4 +22,6 @@ public interface EqpDao {
 
     //根据id查询单条器材库数据
     Eqp getOneByEqpId(Integer eqpId);
+
+    Map<Integer, Eqp> getEqpMapInIds(String eqpIds);
 }

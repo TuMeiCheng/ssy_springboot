@@ -2,6 +2,8 @@ package com.wande.ssy.entity;
 
 import com.jfinal.plugin.activerecord.Model;
 
+import javax.validation.constraints.NotNull;
+
 public class Org extends Model<Org> {
 
     private static final Long serialVersionUID = -1980930091536923073L;
@@ -13,14 +15,13 @@ public class Org extends Model<Org> {
     private String name;		// 管辖机构名称
     private Integer    level;		// level
     private Long   createTime;	// 创建时间
-    private Integer   createBy;	// 创建人
+    private Long   createBy;	// 创建人
     private Long   modifyTime;	// 修改时间
-    private Integer   modifyBy;	// 最后修改人
+    private Long   modifyBy;	// 最后修改人
 
-
+    @NotNull(message = "管辖机构id不能为空！")
     public Integer getOrgId() {
        return get("orgId");
-
     }
 
     public void setOrgId(Integer orgId) {
@@ -28,6 +29,7 @@ public class Org extends Model<Org> {
        
     }
 
+    @NotNull(message = "父级地区ID不能为空!")
     public Integer getParentId() {
        return get("parentId");
 
@@ -48,6 +50,7 @@ public class Org extends Model<Org> {
        
     }
 
+    @NotNull(message = "所属区域ID不能为空!")
     public Integer getRegionId() {
        return get("regionId");
 
@@ -58,6 +61,7 @@ public class Org extends Model<Org> {
        
     }
 
+    @NotNull(message = "管辖机构名称不能为空!")
     public String getName() {
        return get("name");
 
@@ -88,11 +92,11 @@ public class Org extends Model<Org> {
       
     }
 
-    public Integer getCreateBy() {
+    public Long getCreateBy() {
         return get("createBy");
 
     }
-    public void setCreateBy(Integer createBy) {
+    public void setCreateBy(Long createBy) {
        set("createBy",createBy);
        
     }
@@ -107,13 +111,16 @@ public class Org extends Model<Org> {
         
     }
 
-    public Integer getModifyBy(){
+    public Long getModifyBy(){
        return get("modifyBy");
-
     }
 
-    public void setModifyBy(Integer modifyBy) {
+    public void setModifyBy(Long modifyBy) {
        set("modifyBy",modifyBy);
-       
+    }
+
+    //===================================================================
+    public String  getNamelabel(){
+        return get("namelabel");
     }
 }

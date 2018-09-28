@@ -12,6 +12,7 @@ import com.ynm3k.utils.string.StringUtil;
 import org.springframework.stereotype.Repository;
 
 import java.io.UnsupportedEncodingException;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -83,8 +84,7 @@ public class AdminDaoImpl implements AdminDao{
     public Boolean updatePwd(Admin obj, String newPwd) {
         try {
             String pwd = MD5Coding.encode2HexStr(newPwd.getBytes("UTF-8"));
-            obj.findById(obj.getUin()).set("pwd",pwd).update();
-            return true;
+           return obj.findById(obj.getUin()).set("pwd",pwd).update();
             } catch (UnsupportedEncodingException e1) {
             e1.printStackTrace();
             return false;
@@ -144,6 +144,31 @@ public class AdminDaoImpl implements AdminDao{
     @Override
     public Boolean updateAdmin(Admin admin) {
         return admin.update();
+    }
+
+    /**
+     * 根据adminIds 获取admin列表, 用于优化查询数据, 少查SQL
+     * @param adminIds
+     * @return
+     */
+    @Override
+    public Map<Long, Admin> getAdminMapInIds(String adminIds) {
+
+        adminIds = StringUtil.isEmpty(adminIds) ? "''" : adminIds;
+        Map<Long, Admin> list = new HashMap<Long, Admin>();
+        //查询数据
+        String sql="select * from eqp_admin where uin in(" + adminIds + ")";
+        try {
+            List<Admin> list2 = new Admin().find(sql);
+            for (Admin obj : list2) {
+                list.put(obj.getUin(),obj);
+            }
+            return list;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return new HashMap<Long, Admin>();
+
     }
 
 

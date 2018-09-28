@@ -2,6 +2,8 @@ package com.wande.ssy.entity;
 
 import com.jfinal.plugin.activerecord.Model;
 
+import javax.validation.constraints.NotNull;
+
 public class Region extends Model<Region> {
 
     private static final Long serialVersionUID = 948576853211897059L;
@@ -13,11 +15,12 @@ public class Region extends Model<Region> {
     private String name;		// 地区名称
     private String path;		// path路径
     private Long   createTime;	// 创建时间
-    private Integer   createBy;	// 创建人
+    private Long   createBy;	// 创建人
     private Long   modifyTime;	// 修改时间
     private Long   modifyBy;	// 最后修改时间
 
 
+    @NotNull(message = "地区id不能为空")
     public Integer getRegionId() {
         return get("regionId");
     }
@@ -26,6 +29,7 @@ public class Region extends Model<Region> {
        set("regionId",regionId);
     }
 
+    @NotNull(message = "父级地区ID不能为空!")
     public Integer getParentId() {
         return get("parentId");
     }
@@ -42,6 +46,7 @@ public class Region extends Model<Region> {
       set("level",level);
     }
 
+    @NotNull(message = "拼音简称不能为空")
     public String getScode() {
        return get("scode");
     }
@@ -50,6 +55,7 @@ public class Region extends Model<Region> {
        set("scode",scode);
     }
 
+    @NotNull(message = "地区名称不能为空!")
     public String getName() {
         return get("name");
     }
@@ -75,11 +81,11 @@ public class Region extends Model<Region> {
        set("createTime",createTime);
     }
 
-    public Integer getCreateBy() {
+    public Long getCreateBy() {
        return get("createBy");
     }
 
-    public void setCreateBy(Integer createBy) {
+    public void setCreateBy(Long createBy) {
         set("createBy",createBy);
 
     }
@@ -99,4 +105,12 @@ public class Region extends Model<Region> {
     public void setModifyBy(Long modifyBy) {
       set("modifyBy",modifyBy);
     }
+
+
+    //===================================================================
+    public String  getNamelabel(){
+        return get("namelabel");
+    }
+
+
 }

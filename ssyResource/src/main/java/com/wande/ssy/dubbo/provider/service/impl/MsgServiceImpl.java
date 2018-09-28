@@ -18,11 +18,17 @@ public class MsgServiceImpl implements MsgService {
 
     @Override
     public RespWrapper<Boolean> addMsg(Msg obj) {
-        return null;
+        boolean rs = msgDao.insert(obj);
+        if (rs) {
+            return RespWrapper.makeResp(0, "", rs);
+        } else {
+            return RespWrapper.makeResp(1001, "系统繁忙", null);
+        }
     }
 
     @Override
     public RespWrapper<DataPage<Msg>> getMsgByPage(Map<String, Object> params, int pageNo, int pageSize) {
-        return null;
+        DataPage<Msg> page = this.msgDao.getMsgByPage(params, pageNo, pageSize);
+        return RespWrapper.makeResp(0, "查询成功!", page);
     }
 }

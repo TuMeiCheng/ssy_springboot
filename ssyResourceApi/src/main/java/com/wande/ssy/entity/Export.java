@@ -14,12 +14,10 @@ public class Export extends Model<Export> {
 
     public Integer getExportId() {
         return get("exportId");
-
     }
 
     public void setExportId(Integer exportId) {
             set("exportId",exportId);
-
     }
 
     public Integer getExportNum() {
@@ -28,7 +26,6 @@ public class Export extends Model<Export> {
 
     public void setExportNum(Integer exportNum) {
         set("exportNum",exportNum);
-        
     }
 
     public Long getExportTime() {
@@ -37,15 +34,19 @@ public class Export extends Model<Export> {
 
     public void setExportTime(Long exportTime) {
        set("exportTime",exportTime);
-       
     }
 
-    public Integer getExportBy() {
+    public Long getExportBy() {
         return get("exportBy");
     }
 
-    public void setExportBy(Integer exportBy) {
+    public void setExportBy(Long exportBy) {
        set("exportBy",exportBy);
-       
     }
+
+    //========================================================================================
+    public String  getExportName() {
+        return get("exportName");
+    }
+
 }

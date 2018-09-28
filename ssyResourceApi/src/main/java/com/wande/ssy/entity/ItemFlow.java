@@ -6,38 +6,39 @@ import com.jfinal.plugin.activerecord.Model;
 public class ItemFlow extends Model<ItemFlow> {
     private static final Long serialVersionUID = 63319165378654688L;
 
-    private Integer    itemflowId;	// 器材巡检主键
-    private Integer    orgId;		// 管辖机构ID
-    private Integer   agencyId;	// 管理公司ID
-    private Integer    areaId;		// 场地ID
-    private Integer    itemId;		// 器材ID
-    private String actionName;	// 巡检操作
-    private Integer    statusOld;	// 巡检前状态
-    private Integer    statusNew;	// 维修前状态
-    private Integer    followId;	// 维修记录ID(同表)
-    private Integer    reasonType;	// 报修理由类别
-    private String imgsnap;		// 损坏图片快照
-    private String remark;		// 备注
-    private Integer    sourcefrom;	// 巡检来源(1维修人员,2市民)
-    private String ip;			// 巡检IP
-    private double locationLng;	// 经度值
-    private double locationLat;	// 纬度值
-    private Integer    check;		// 1合格 0不在范围内巡检
-    private Long   createTime;	// 创建时间
-    private Integer   createBy;	// 创建人
-    private Long   modifyTime;	// 修改时间
-    private Integer   modifyBy;		// 最后修改人
+    private Integer itemflowId;    // 器材巡检主键
+    private Integer orgId;        // 管辖机构ID
+    private Integer agencyId;    // 管理公司ID
+    private Integer areaId;        // 场地ID
+    private Integer itemId;        // 器材ID
+    private String actionName;    // 巡检操作
+    private Integer statusOld;    // 巡检前状态
+    private Integer statusNew;    // 维修前状态
+    private Integer followId;    // 维修记录ID(同表)
+    private Integer reasonType;    // 报修理由类别
+    private String imgsnap;        // 损坏图片快照
+    private String remark;        // 备注
+    private Integer sourcefrom;    // 巡检来源(1维修人员,2市民)
+    private String ip;            // 巡检IP
+    private double locationLng;    // 经度值
+    private double locationLat;    // 纬度值
+    private Integer check;        // 1合格 0不在范围内巡检
+    private Long createTime;    // 创建时间
+    private Integer createBy;    // 创建人
+    private Long modifyTime;    // 修改时间
+    private Integer modifyBy;        // 最后修改人
 
-    private Integer    flowType;    // 巡检类型  1器材码管理  2场地码管理
+    private Integer flowType;    // 巡检类型  1器材码管理  2场地码管理
+
 
     public Integer getItemflowId() {
-       return get("itemflowId");
+        return get("itemflowId");
 
     }
 
     public void setItemflowId(Integer itemflowId) {
-        set("itemflowId",itemflowId);
-        
+        set("itemflowId", itemflowId);
+
     }
 
     public Integer getOrgId() {
@@ -45,17 +46,16 @@ public class ItemFlow extends Model<ItemFlow> {
     }
 
     public void setOrgId(Integer orgId) {
-        set("orgId",orgId);
-        
+        set("orgId", orgId);
+
     }
 
-    public Integer getAgencyId() {
+    public Long getAgencyId() {
         return get("agencyId");
     }
 
-    public void setAgencyId(Integer agencyId) {
-     set("agencyId",agencyId);
-     
+    public void setAgencyId(Long agencyId) {
+        set("agencyId", agencyId);
     }
 
     public Integer getAreaId() {
@@ -63,8 +63,7 @@ public class ItemFlow extends Model<ItemFlow> {
     }
 
     public void setAreaId(Integer areaId) {
-       set("areaId",areaId);
-       
+        set("areaId", areaId);
     }
 
     public Integer getItemId() {
@@ -72,8 +71,7 @@ public class ItemFlow extends Model<ItemFlow> {
     }
 
     public void setItemId(Integer itemId) {
-        set("itemId",itemId);
-        
+        set("itemId", itemId);
     }
 
     public String getActionName() {
@@ -81,8 +79,7 @@ public class ItemFlow extends Model<ItemFlow> {
     }
 
     public void setActionName(String actionName) {
-       set("actionName",actionName);
-       
+        set("actionName", actionName);
     }
 
     public Integer getStatusOld() {
@@ -90,8 +87,7 @@ public class ItemFlow extends Model<ItemFlow> {
     }
 
     public void setStatusOld(Integer statusOld) {
-        set("statusOld",statusOld);
-        
+        set("statusOld", statusOld);
     }
 
     public Integer getStatusNew() {
@@ -99,8 +95,7 @@ public class ItemFlow extends Model<ItemFlow> {
     }
 
     public void setStatusNew(Integer statusNew) {
-       set("statusNew",statusNew);
-       
+        set("statusNew", statusNew);
     }
 
     public Integer getFollowId() {
@@ -108,8 +103,7 @@ public class ItemFlow extends Model<ItemFlow> {
     }
 
     public void setFollowId(Integer followId) {
-        set("followId",followId);
-        
+        set("followId", followId);
     }
 
     public Integer getReasonType() {
@@ -117,8 +111,7 @@ public class ItemFlow extends Model<ItemFlow> {
     }
 
     public void setReasonType(Integer reasonType) {
-        set("reasonType",reasonType);
-        
+        set("reasonType", reasonType);
     }
 
     public String getImgsnap() {
@@ -126,8 +119,7 @@ public class ItemFlow extends Model<ItemFlow> {
     }
 
     public void setImgsnap(String imgsnap) {
-        set("imgsnap",imgsnap);
-        
+        set("imgsnap", imgsnap);
     }
 
     public String getRemark() {
@@ -135,8 +127,7 @@ public class ItemFlow extends Model<ItemFlow> {
     }
 
     public void setRemark(String remark) {
-        set("remark",remark);
-        
+        set("remark", remark);
     }
 
     public Integer getSourcefrom() {
@@ -144,8 +135,7 @@ public class ItemFlow extends Model<ItemFlow> {
     }
 
     public void setSourcefrom(Integer sourcefrom) {
-        set("sourcefrom",sourcefrom);
-        ;
+        set("sourcefrom", sourcefrom);
     }
 
     public String getIp() {
@@ -153,8 +143,7 @@ public class ItemFlow extends Model<ItemFlow> {
     }
 
     public void setIp(String ip) {
-        set("ip",ip);
-        
+        set("ip", ip);
     }
 
     public double getLocationLng() {
@@ -162,8 +151,7 @@ public class ItemFlow extends Model<ItemFlow> {
     }
 
     public void setLocationLng(double locationLng) {
-       set("locationLng",locationLng);
-       
+        set("locationLng", locationLng);
     }
 
     public double getLocationLat() {
@@ -171,8 +159,7 @@ public class ItemFlow extends Model<ItemFlow> {
     }
 
     public void setLocationLat(double locationLat) {
-        set("locationLat",locationLat);
-        
+        set("locationLat", locationLat);
     }
 
     public Integer getCheck() {
@@ -180,8 +167,7 @@ public class ItemFlow extends Model<ItemFlow> {
     }
 
     public void setCheck(Integer check) {
-        set("check",check);
-        
+        set("check", check);
     }
 
     public Long getCreateTime() {
@@ -189,17 +175,15 @@ public class ItemFlow extends Model<ItemFlow> {
     }
 
     public void setCreateTime(Long createTime) {
-       set("createTime",createTime);
-       
+        set("createTime", createTime);
     }
 
-    public Integer getCreateBy() {
+    public Long getCreateBy() {
         return get("createBy");
     }
 
-    public void setCreateBy(Integer createBy) {
-        set("createBy",createBy);
-        
+    public void setCreateBy(Long createBy) {
+        set("createBy", createBy);
     }
 
     public Long getModifyTime() {
@@ -207,17 +191,15 @@ public class ItemFlow extends Model<ItemFlow> {
     }
 
     public void setModifyTime(Long modifyTime) {
-        set("modifyTime",modifyTime);
-        
+        set("modifyTime", modifyTime);
     }
 
-    public Integer getModifyBy() {
+    public Long getModifyBy() {
         return get("modifyBy");
     }
 
-    public void setModifyBy(Integer modifyBy) {
-            set("modifyBy",modifyBy);
-            
+    public void setModifyBy(Long modifyBy) {
+        set("modifyBy", modifyBy);
     }
 
     public Integer getFlowType() {
@@ -225,7 +207,25 @@ public class ItemFlow extends Model<ItemFlow> {
     }
 
     public void setFlowType(Integer flowType) {
-       set("flowType",flowType);
-       
+        set("flowType", flowType);
     }
+
+    //=============================================================
+    public String getItemsn() {
+        return get("itemsn");
+    }
+
+    public String getEqpName() {
+        return get("eqpName");
+    }
+
+    public String getReasonName() {
+        return get("reasonName");
+    }
+
+    public Integer getStatus() {
+        return get("status");
+    }
+
+
 }

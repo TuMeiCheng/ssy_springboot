@@ -30,4 +30,7 @@ public interface UserDao  {
      * @return
      */
     DataPage<User> getUserByPage(Map<String, Object> params, Integer pageNo, Integer pageSize);
+
+
+    Map<Long, User> getUserMapInIds(String userIds);
 }

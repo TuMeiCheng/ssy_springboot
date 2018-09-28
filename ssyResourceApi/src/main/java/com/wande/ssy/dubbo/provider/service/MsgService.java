@@ -12,6 +12,7 @@ import java.util.Map;
  */
 public interface MsgService {
 
-	public RespWrapper<Boolean> addMsg(Msg obj);
-	public RespWrapper<DataPage<Msg>> getMsgByPage(Map<String, Object> params, int pageNo, int pageSize);
+	 RespWrapper<Boolean> addMsg(Msg obj);
+
+	 RespWrapper<DataPage<Msg>> getMsgByPage(Map<String, Object> params, int pageNo, int pageSize);
 }

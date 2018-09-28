@@ -91,7 +91,7 @@ public class ResourceApplication extends SpringBootServletInitializer {
 		return Ret.ok("data", JSON.toJSON(r1.getColumns())).set("msg", "成功").set("data1",JSON.toJSONString(l.toRecord().getColumns())).set("data2", l);
     }
 
-	@RequestMapping("/abc/tt")
+	@RequestMapping("abc/tt")
 	public Object tt(@RequestParam("name") String  nn) {
 		System.out.println("来到tt"+nn);
 		Log l = new Log().findById(17);

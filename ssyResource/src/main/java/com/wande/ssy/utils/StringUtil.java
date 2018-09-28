@@ -520,7 +520,7 @@ public final class StringUtil {
 	/**
 	 * 获取字节数组的UTF-8编码字符串
 	 * 
-	 * @param s 
+	 * @param b
 	 * @return
 	 */
 	public static String getUTF8String(byte[] b) {
@@ -533,7 +533,7 @@ public final class StringUtil {
 	/**
 	 * 获取字节数组的GBK编码字符串
 	 * 
-	 * @param s
+	 * @param b
 	 * @return
 	 */
 	public static String getGBKString(byte[] b) {
@@ -1319,4 +1319,19 @@ public final class StringUtil {
 		}
 		return sb.toString();
 	}
+
+	//判读字符串是否全部是大写字母
+	public static boolean isAcronym(String word)
+	{
+		for(int i = 0; i < word.length(); i++)
+		{
+			char c = word.charAt(i);
+			if (!Character.isUpperCase(c))
+			{
+				return false;
+			}
+		}
+		return true;
+	}
+
 }

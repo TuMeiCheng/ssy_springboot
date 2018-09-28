@@ -29,7 +29,7 @@
             <artifactId>hibernate-validator</artifactId>
         </dependency>
 
-    </dependencies>
+	</dependencies>
 
 
 </project>

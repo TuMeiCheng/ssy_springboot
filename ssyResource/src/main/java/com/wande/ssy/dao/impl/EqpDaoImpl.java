@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -96,5 +97,24 @@ public class EqpDaoImpl implements EqpDao {
     @Override
     public Eqp getOneByEqpId(Integer eqpId) {
         return new Eqp().findById(eqpId);
+    }
+
+    @Override
+    public Map<Integer, Eqp> getEqpMapInIds(String eqpIds) {
+        eqpIds = StringUtil.isEmpty(eqpIds) ? "''" : eqpIds;
+        Map<Integer, Eqp> list = new HashMap<Integer, Eqp>();
+        //查询数据
+        String sql="select * from eqp_eqp where eqpId in(" + eqpIds + ")";
+        try {
+            List<Eqp> list2 = new Eqp().find(sql);
+            for (Eqp eqp : list2) {
+                list.put(eqp.getEqpId(),eqp);
+            }
+            return list;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return new HashMap<Integer, Eqp>();
+
     }
 }

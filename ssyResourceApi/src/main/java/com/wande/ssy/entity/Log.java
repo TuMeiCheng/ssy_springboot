@@ -80,4 +80,9 @@ public class Log extends Model<Log>{
 	public void setCreateBy(Integer createBy) {
 		set("createBy",createBy);
 	}
+
+	public String getAdminName() {
+		return get("adminName");
+	}
+
 }

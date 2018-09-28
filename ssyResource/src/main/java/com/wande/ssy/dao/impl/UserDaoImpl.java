@@ -9,6 +9,7 @@ import com.ynm3k.utils.string.StringUtil;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -105,6 +106,25 @@ public class UserDaoImpl implements UserDao {
 
         return new DataPage<User>(user_page.getList(), user_page.getTotalRow(), pageNo, pageSize);
 
+    }
+
+    @Override
+    public Map<Long, User> getUserMapInIds(String userIds) {
+
+        userIds = StringUtil.isEmpty(userIds) ? "''" : userIds;
+        Map<Long, User> list = new HashMap<Long, User>();
+        //查询数据
+        String sql="select * from eqp_user where uin in(" + userIds + ")";
+            try {
+                List<User> list2 = new User().find(sql);
+                for (User obj : list2) {
+                    list.put(obj.getUin(), obj);
+                }
+                return list;
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return new HashMap<Long, User>();
     }
 
 }

@@ -1319,4 +1319,21 @@ public final class StringUtil {
 		}
 		return sb.toString();
 	}
+
+	//判断字符串是否全部是大写字母
+	public static boolean isAcronym(String word)
+	{
+		for(int i = 0; i < word.length(); i++)
+		{
+			char c = word.charAt(i);
+			if (!Character.isUpperCase(c))
+			{
+				return false;
+			}
+		}
+		return true;
+	}
+
+
+
 }

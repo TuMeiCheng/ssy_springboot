@@ -31,4 +31,17 @@ public interface AreaDao {
    //根据id查询
     Area getOneArea(Integer id);
 
+
+
+    //根据左侧树形点击的行政区域ID查找所有场地ids
+    String getAreaListByRegionId(int regionId);
+
+    /**
+     * 根据areaIds 获取area列表, 用于优化查询数据, 少查SQL
+     * @param areaIds
+     * @return
+     */
+    Map<Integer, Area> getAreaMapInIds(String areaIds);
+
+    int getAreaIdByQrcode(String qrcode);
 }

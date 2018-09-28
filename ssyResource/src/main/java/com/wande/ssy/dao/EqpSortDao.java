@@ -3,6 +3,7 @@ package com.wande.ssy.dao;
 import com.wande.ssy.entity.EqpSort;
 
 import java.util.List;
+import java.util.Map;
 
 public interface EqpSortDao {
 
@@ -27,4 +28,6 @@ public interface EqpSortDao {
 
     //获取器材分类列表
     List<EqpSort> getEqpsortList(Integer parentId);
+
+    Map<Integer, EqpSort> getEqpsortMapInIds(String eqpsortIds);
 }

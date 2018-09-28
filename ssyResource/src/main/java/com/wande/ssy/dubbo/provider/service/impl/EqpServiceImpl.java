@@ -56,7 +56,11 @@ public class EqpServiceImpl implements EqpService {
 
     @Override
     public RespWrapper<Eqp> getOneEqp(int eqpId) {
-        return null;
+        Eqp eqp =  this.eqpDao.getOneByEqpId(eqpId);
+        if (eqp == null){
+            return RespWrapper.makeResp(1001, "【查询器材Eqp】该器材不存在!", null);
+        }
+        return RespWrapper.makeResp(0, "", eqp);
     }
 
     @Override
@@ -73,6 +77,6 @@ public class EqpServiceImpl implements EqpService {
 
     @Override
     public RespWrapper<Map<Integer, Eqp>> getEqpMapInIds(String eqpIds) {
-        return null;
+        return RespWrapper.makeResp(0, "", this.eqpDao.getEqpMapInIds(eqpIds));
     }
 }

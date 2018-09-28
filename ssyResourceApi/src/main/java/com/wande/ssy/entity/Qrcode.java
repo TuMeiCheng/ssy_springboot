@@ -2,6 +2,8 @@ package com.wande.ssy.entity;
 
 import com.jfinal.plugin.activerecord.Model;
 
+import javax.validation.constraints.NotNull;
+
 
 public class Qrcode extends Model<Qrcode> {
 
@@ -11,7 +13,7 @@ public class Qrcode extends Model<Qrcode> {
     private String url;			// 提供给市民报修的网页路径
     private String code;		// 二维码
     private String codePrex;	// 编码前缀
-    private Integer   agencyId;	// 管理公司ID
+    private Long   agencyId;	// 管理公司ID
     private Integer    exportId;	// 所属导出记录ID
     private Integer    supplierId;	// 供应商ID
     private Integer    eqpId;		// 器材ID
@@ -19,9 +21,9 @@ public class Qrcode extends Model<Qrcode> {
     private Integer    status;		// 0无 1未出厂 2出厂 3使用
     private Integer    isdel;		// 0正常 1删除
     private Long   createTime;	// 创建时间
-    private Integer   createBy;	// 创建人
+    private Long   createBy;	// 创建人
     private Long   modifyTime;	// 修改时间
-    private Integer   modifyBy;	// 修改人
+    private Long   modifyBy;	// 修改人
     private Integer isAreaQrcode;   // 0为器材二维码  1为场地二维码
 
     private Integer areaId;			//所属场地id
@@ -66,12 +68,12 @@ public class Qrcode extends Model<Qrcode> {
        
     }
 
-    public Integer getAgencyId() {
+    public Long getAgencyId() {
         return get("agencyId");
 
     }
 
-    public void setAgencyId(Integer agencyId) {
+    public void setAgencyId(Long agencyId) {
         set("agencyId",agencyId);
         
     }
@@ -83,7 +85,6 @@ public class Qrcode extends Model<Qrcode> {
 
     public void setExportId(Integer exportId) {
        set("exportId",exportId);
-       
     }
 
     public Integer getSupplierId() {
@@ -93,7 +94,6 @@ public class Qrcode extends Model<Qrcode> {
 
     public void setSupplierId(Integer supplierId) {
        set("supplierId",supplierId);
-       
     }
 
     public Integer getEqpId() {
@@ -107,17 +107,14 @@ public class Qrcode extends Model<Qrcode> {
 
     public Integer getStandardcode() {
        return get("standardcode");
-
     }
 
     public void setStandardcode(Integer standardcode) {
        set("standardcode",standardcode);
-       
     }
 
     public Integer getStatus() {
        return get("status");
-
     }
 
     public void setStatus(Integer status) {
@@ -126,17 +123,14 @@ public class Qrcode extends Model<Qrcode> {
 
     public Integer getIsdel() {
       return get("isdel");
-
     }
 
     public void setIsdel(Integer isdel) {
        set("isdel",isdel);
-       
     }
 
     public Long getCreateTime() {
        return get("createTime");
-
     }
 
     public void setCreateTime(Long createTime) {
@@ -144,14 +138,12 @@ public class Qrcode extends Model<Qrcode> {
        
     }
 
-    public Integer getCreateBy() {
+    public Long getCreateBy() {
       return get("createBy");
-
     }
 
-    public void setCreateBy(Integer createBy) {
+    public void setCreateBy(Long createBy) {
        set("createBy",createBy);
-       
     }
 
     public Long getModifyTime() {
@@ -161,36 +153,43 @@ public class Qrcode extends Model<Qrcode> {
 
     public void setModifyTime(Long modifyTime) {
        set("modifyTime",modifyTime);
-       
     }
 
-    public Integer getModifyBy() {
+    public Long getModifyBy() {
         return get("modifyBy");
-
     }
 
-    public void setModifyBy(Integer modifyBy) {
+    public void setModifyBy(Long modifyBy) {
        set("modifyBy",modifyBy);
-       
     }
 
+    @NotNull(message = "二维码类型不能为空!")
     public Integer getIsAreaQrcode() {
        return get("isAreaQrcode");
-
     }
 
     public void setIsAreaQrcode(Integer isAreaQrcode) {
        set("isAreaQrcode",isAreaQrcode);
-       
     }
 
     public Integer getAreaId() {
        return get("areaId");
-
     }
 
     public void setAreaId(Integer areaId) {
        set("areaId",areaId);
-       
     }
+
+
+    //===============================================================
+    public String  getSupplierName() {
+        return get("supplierName");
+    }
+    public String getEqpName() {
+        return get("eqpName");
+    }
+    public String getAgencyName() {
+        return get("agencyName");
+    }
+
 }

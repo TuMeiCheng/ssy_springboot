@@ -4,7 +4,6 @@ import com.jfinal.plugin.activerecord.Model;
 
 public class ItemRepair extends Model<ItemRepair> {
 
-    private static final long serialVersionUID = -6096356516306009085L;
 
     private Integer    repairId;		// 网络报修主键
     private Integer    orgId;			// 管辖机构ID
@@ -43,11 +42,11 @@ public class ItemRepair extends Model<ItemRepair> {
        set("orgId",orgId);
     }
 
-    public Integer getAgencyId() {
+    public Long getAgencyId() {
         return get("agencyId");
     }
 
-    public void setAgencyId(Integer agencyId) {
+    public void setAgencyId(Long agencyId) {
        set("agencyId",agencyId);
     }
 
@@ -132,46 +131,62 @@ public class ItemRepair extends Model<ItemRepair> {
 
     public void setStatus(Integer status) {
        set("status",status);
-       
     }
 
     public Long getCreateTime() {
         return get("createTime");
-
     }
 
     public void setCreateTime(Long createTime) {
        set("createTime",createTime);
-       
     }
 
-    public Integer getCreateBy() {
+    public Long getCreateBy() {
         return get("createBy");
-
     }
 
-    public void setCreateBy(Integer createBy) {
+    public void setCreateBy(Long createBy) {
        set("createBy",createBy);
-       
     }
 
     public Long getModifyTime() {
         return get("modifyTime");
-
     }
 
     public void setModifyTime(Long modifyTime) {
        set("modifyTime",modifyTime);
-       
     }
 
-    public Integer getModifyBy() {
+    public Long getModifyBy() {
         return get("modifyBy");
-
     }
 
-    public void setModifyBy(Integer modifyBy) {
+    public void setModifyBy(Long modifyBy) {
        set("modifyBy",modifyBy);
-       
     }
+
+
+
+
+    //=============================================================
+    public String  getItemsn() {
+        return get("itemsn");
+    }
+
+    public String  getEqpName() {
+        return get("eqpName");
+    }
+
+    public String  getReasonName() {
+        return get("reasonName");
+    }
+
+    public Integer  getStatusOld() {
+        return get("statusOld");
+    }
+
+    public Integer  getStatusNew() {
+        return get("statusNew");
+    }
+
 }

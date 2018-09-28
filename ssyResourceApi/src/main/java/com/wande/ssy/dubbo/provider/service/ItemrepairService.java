@@ -1,7 +1,12 @@
 package com.wande.ssy.dubbo.provider.service;
 
+import com.wande.ssy.entity.Admin;
 import com.wande.ssy.entity.ItemRepair;
+import com.wande.ssy.entity.ItemrepairExt;
+import com.ynm3k.mvc.model.DataPage;
 import com.ynm3k.mvc.model.RespWrapper;
+
+import java.util.Map;
 
 /**
  * ItemrepairService
@@ -39,13 +44,13 @@ public interface ItemrepairService {
 	public RespWrapper<ItemRepair> getOneItemRepair(int repairId);
 	
 	
-//	/**
-////	 * 多参数获取器材网路报修列表
-////	 *
-////	 * @param params
-////	 * @param pageNo
-////	 * @param pageSize
-////	 * @return
-////	 */
-////	public RespWrapper<DataPage<ItemRepairE>> getItemRepairByPage(Admin admin, Map<String, Object> params, int pageNo, int pageSize);
+	/**
+	 * 多参数获取器材网路报修列表
+	 *
+	 * @param params
+	 * @param pageNo
+	 * @param pageSize
+	 * @return
+	 */
+	public RespWrapper<DataPage<ItemrepairExt>> getItemRepairByPage(Admin admin, Map<String, Object> params, int pageNo, int pageSize);
 }

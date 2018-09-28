@@ -7,7 +7,7 @@ public class Item extends Model<Item> {
     private static final long serialVersionUID = -292387099475224462L;
 
     private Long    itemId;		// 器材ID
-    private Long    orgId;		// 管辖机构ID
+    private Integer    orgId;		// 管辖机构ID
     private Long   agencyId;	// 管理公司ID
     private Long    areaId;		// 场地ID
     private String url;			// URL路径
@@ -23,29 +23,29 @@ public class Item extends Model<Item> {
     private Long   flowBy;		// 巡检人ID
     private Long   repairBy;	// 维修人ID
     private Long    status;		// 器材状态,0未安装,1正常,2报修,3报废
-    private Long    isdel;		// 软删除标志 0正常 1删除
+    private Integer    isdel;		// 软删除标志 0正常 1删除
     private Long   createTime;	// 创建时间
     private Long   createBy;	// 创建人
     private Long   modifyTime;	// 修改时间
     private Long   modifyBy;	// 最后修改人
-    private Long   itemType;       //'1器材码管理, 2产地码管理'
+    private Integer   itemType;       //'1器材码管理, 2产地码管理'
 
 
 //=================================================================================================
 
-    public Long getItemId(){
-        return get("ItemId");
+    public Integer getItemId(){
+        return get("itemId");
     }
 
-    public void setItemId(Long itemId){
+    public void setItemId(Integer itemId){
         set("itemId",itemId);
     }
 
-    public Long getOrgId() {
+    public Integer getOrgId() {
         return get("orgId"); 
     }
 
-    public void setOrgId(Long orgId) {
+    public void setOrgId(Integer orgId) {
         set("orgId",orgId);
     }
 
@@ -57,11 +57,11 @@ public class Item extends Model<Item> {
         set("agencyId",agencyId);
     }
 
-    public Long getAreaId() {
+    public Integer getAreaId() {
         return get("areaId");
     }
 
-    public void setAreaId(Long areaId) {
+    public void setAreaId(Integer areaId) {
         set("areaId",areaId);
     }
 
@@ -89,27 +89,27 @@ public class Item extends Model<Item> {
         set("itemsn",itemsn);
     }
 
-    public Long getEqpsortId() {
+    public Integer getEqpsortId() {
         return get("eqpsortId");
     }
 
-    public void setEqpsortId(Long eqpsortId) {
+    public void setEqpsortId(Integer eqpsortId) {
         set("eqpsortId",eqpsortId);
     }
 
-    public Long getEqpId() {
+    public Integer getEqpId() {
         return get("eqpId"); 
     }
 
-    public void setEqpId(Long eqpId) {
+    public void setEqpId(Integer eqpId) {
         set("eqpId",eqpId);
     }
 
-    public Long getSupplierId() {
+    public Integer getSupplierId() {
         return get("supplierId"); 
     }
 
-    public void setSupplierId(Long supplierId) {
+    public void setSupplierId(Integer supplierId) {
         set("supplierId",supplierId);
     }
 
@@ -129,19 +129,19 @@ public class Item extends Model<Item> {
         set("expireTime",expireTime);
     }
 
-    public Long getStandardcode() {
+    public Integer getStandardcode() {
         return get("standardcode"); 
     }
 
-    public void setStandardcode(Long standardcode) {
+    public void setStandardcode(Integer standardcode) {
         set("standardcode",standardcode);
     }
 
-    public Long getProvideWay() {
+    public Integer getProvideWay() {
         return get("provideWay"); 
     }
 
-    public void setProvideWay(Long provideWay) {
+    public void setProvideWay(Integer provideWay) {
         set("provideWay",provideWay);
     }
 
@@ -161,19 +161,19 @@ public class Item extends Model<Item> {
         set("repairBy",repairBy);
     }
 
-    public Long getStatus() {
+    public Integer getStatus() {
         return get("status"); 
     }
 
-    public void setStatus(Long status) {
+    public void setStatus(Integer status) {
         set("status",status);
     }
 
-    public Long getIsdel() {
+    public Integer getIsdel() {
         return get("isdel"); 
     }
 
-    public void setIsdel(Long isdel) {
+    public void setIsdel(Integer isdel) {
         set("isdel",isdel);
     }
 
@@ -209,11 +209,77 @@ public class Item extends Model<Item> {
         set("modifyBy",modifyBy);
     }
 
-    public Long getItemType() {
+    public Integer getItemType() {
         return get("itemType");
     }
 
-    public void setItemType(Long itemType) {
+    public void setItemType(Integer itemType) {
         set("itemType",itemType);
     }
+
+
+    //==========================================================================
+    //给前端展示方便获取json格式数据
+    public String  getRegionFullName() {
+        return get("regionFullName");
+    }
+    public String getAreaName() {
+        return getStr("areaName");
+    }
+    public Double getLongitude() {
+        return getDouble("longitude");
+    }
+    public Double getLatitude() {
+        return getDouble("latitude");
+    }
+    public String getOrgName() {
+        return get("orgName");
+    }
+    public String getAgencyName() {
+        return get("agencyName");
+    }
+    public String getEqpName() {
+        return get("eqpName");
+    }
+    public String getEqpCatesn() {
+        return get("eqpCatesn");
+    }
+    public String getSupplierName() {
+        return get("supplierName");
+    }
+    public String getCreateName() {
+        return get("createName");
+    }
+    public String getFlowName() {
+        return get("flowName");
+    }
+    public String getFlowPhone() {
+        return get("flowPhone");
+    }
+
+    public String getRepairName() {
+        return get("repairName");
+    }
+    public String getRepairPhone() {
+        return get("repairPhone");
+    }
+    public String getSortName() {
+        return get("sortName");
+    }
+    public String getStandardcodeName() {
+        return get("standardcodeName");
+    }
+    public String getProvideWayName() {
+        return get("provideWayName");
+    }
+    public String getInstallDate() {
+        return get("installDate");
+    }
+    public String getExpireDate() {
+        return get("expireDate");
+    }
+    public String getLeftTime() {
+        return get("leftTime");
+    }
+
 }

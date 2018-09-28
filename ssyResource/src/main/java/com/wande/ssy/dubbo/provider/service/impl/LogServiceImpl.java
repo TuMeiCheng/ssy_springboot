@@ -29,6 +29,7 @@ public class LogServiceImpl implements LogService {
 
     @Override
     public RespWrapper<DataPage<Log>> getLogByPage(Map<String, Object> params, int pageNo, int pageSize) {
-        return null;
+        DataPage<Log> page = this.logDao.getLogByPage(params, pageNo, pageSize);
+        return RespWrapper.makeResp(0, "查询成功!", page);
     }
 }

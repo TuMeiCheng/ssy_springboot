@@ -19,16 +19,23 @@ public class BrokenreasonServiceImpl implements BrokenreasonService {
 
     @Override
     public RespWrapper<Brokenreason> getOneBrokenreason(int reasonId) {
-        return null;
+        Brokenreason obj = brokenreasonDao.getOneBrokenreason(reasonId);
+        if (obj == null) {
+            return RespWrapper.makeResp(0, "不存在该对象!", null);
+        } else {
+            return RespWrapper.makeResp(0, "", obj);
+        }
+
     }
 
     @Override
     public RespWrapper<List<Brokenreason>> getBrokenreasonList(int parentId) {
-        return null;
+        List<Brokenreason> rets = this.brokenreasonDao.getBrokenreasonList(parentId);
+        return RespWrapper.makeResp(0, "", rets);
     }
 
     @Override
     public RespWrapper<Map<Integer, Brokenreason>> getBrokenreasonMapInIds(String reasonIds) {
-        return null;
+        return RespWrapper.makeResp(0, "", brokenreasonDao.getBrokenreasonMapInIds(reasonIds));
     }
 }

@@ -35,5 +35,7 @@ public interface AdminDao {
     //更新Admin
     Boolean updateAdmin(Admin admin);
 
+    Map<Long, Admin> getAdminMapInIds(String adminIds);
+
 
 }

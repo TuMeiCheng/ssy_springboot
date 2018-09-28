@@ -30,12 +30,33 @@ public class ItemServiceImpl implements ItemService {
 
     @Override
     public RespWrapper<Item> getOneItem(int itemId) {
-        return null;
+        try {
+            Item obj = itemDao.getOneItem(itemId);
+            if (obj != null) {
+                return RespWrapper.makeResp(0, "", obj);
+            } else {
+                return RespWrapper.makeResp(1001, "该器材不存在!", null);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return RespWrapper.makeResp(1001, "系统繁忙!", null);
     }
 
     @Override
     public RespWrapper<Item> getOneItemByItemsn(String itemsn) {
-        return null;
+        try {
+            Item obj = itemDao.getOneItemByItemsn(itemsn);
+            if (obj != null) {
+                return RespWrapper.makeResp(0, "", obj);
+            } else {
+                return RespWrapper.makeResp(1001, "该器材不存在!", null);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return RespWrapper.makeResp(1001, "系统繁忙!", null);
+
     }
 
     @Override
@@ -45,15 +66,8 @@ public class ItemServiceImpl implements ItemService {
 
     @Override
     public RespWrapper<DataPage<Item>> getItemByPage(Admin admin, Map<String, Object> params, int pageNo, int pageSize) {
-        //取出查询条件参数
-        Item item = (Item)params.get("Item");
-        Integer  projectId =  (Integer) params.get("projectId");   // 项目分类ID
-        Integer regionId = (Integer) params.get("regionId");    // 地区id
-        String  installYear = (String )params.get("installYear");  //安装时间
-        String expireYearStr = (String )params.get("expireYearStr");  //到期时间
 
-
-
-        return null;
+        DataPage<Item> page = itemDao.getItemByPage(admin, params, pageNo, pageSize);
+        return RespWrapper.makeResp(0, "", page);
     }
 }

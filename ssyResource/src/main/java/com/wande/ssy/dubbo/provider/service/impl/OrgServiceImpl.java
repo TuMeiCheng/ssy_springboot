@@ -4,8 +4,11 @@ import com.alibaba.dubbo.config.annotation.Service;
 import com.wande.ssy.dao.OrgDao;
 import com.wande.ssy.dubbo.provider.service.OrgService;
 import com.wande.ssy.entity.Org;
+import com.wande.ssy.utils.CopyPropertiesUtils;
 import com.ynm3k.mvc.model.DataPage;
+import com.ynm3k.mvc.model.RespException;
 import com.ynm3k.mvc.model.RespWrapper;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
@@ -19,13 +22,42 @@ public class OrgServiceImpl implements OrgService {
 
     @Override
     public RespWrapper<Integer> addOrg(Org obj) {
-        orgDao.getOrgIdsByPid(2);
-        return null;
+
+        if (this.orgDao.isExist(obj.getName(), 0)) {
+            return RespWrapper.makeResp(1001, "该体育局名称已经存在!", null);
+        }
+        int rs = orgDao.insert(obj);
+        if (rs > 0) {
+            Org parent = orgDao.getOneOrg(obj.getParentId());
+            String path = parent == null ? (rs + "") : parent.getPath() + "," + (rs + "");
+            obj.setOrgId(rs);
+            obj.setPath(path);
+            obj.setLevel(path.split(",").length);
+            boolean urs = orgDao.updatePath(obj);
+            if (urs) {
+                return RespWrapper.makeResp(0, "", rs);
+            }
+        }
+        System.out.println("OrgServiceImpl29,添加出错!");
+        return RespWrapper.makeResp(1001, "系统繁忙!", null);
     }
 
     @Override
     public RespWrapper<Boolean> updateOrg(Org obj) {
-        return null;
+        Org org = this.orgDao.getOneOrg(obj.getOrgId());
+        if (org == null) {
+            throw new RespException(1001, "该管辖机构不存在");
+        }
+        //将obj中的要修改参数拷贝到查询到的修改bean >> eqp 中并且过滤掉obj中属性值为null的属性
+        BeanUtils.copyProperties(obj, org, CopyPropertiesUtils.getNullPropertyNames(obj));
+        org.setModifyTime(System.currentTimeMillis());
+        //保存更新到数据库
+        boolean rs = orgDao.update(org);
+        if (rs) {
+            return RespWrapper.makeResp(0, "", true);
+        } else {
+            return RespWrapper.makeResp(1001, "系统繁忙!", false);
+        }
     }
 
     @Override
@@ -47,7 +79,18 @@ public class OrgServiceImpl implements OrgService {
 
     @Override
     public RespWrapper<Org> getOneOrgByRegionId(int regionId) {
-        return null;
+        try {
+            Org obj = orgDao.getOneOrgByRegionId(regionId);
+            if (obj != null) {
+                return RespWrapper.makeResp(0, "", obj);
+            } else {
+                return RespWrapper.makeResp(1001, "该地区不存在管辖机构!", null);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return RespWrapper.makeResp(1001, "系统繁忙!", null);
+        }
+
     }
 
     @Override
@@ -57,11 +100,14 @@ public class OrgServiceImpl implements OrgService {
 
     @Override
     public RespWrapper<List<Org>> getOrgList(int parentId) {
-        return null;
+
+        List<Org> rets = orgDao.getOrgList(parentId);
+        return RespWrapper.makeResp(0, "", rets);
+
     }
 
     @Override
     public RespWrapper<Map<Integer, Org>> getOrgMapInIds(String orgIds) {
-        return null;
+        return RespWrapper.makeResp(0, "", this.orgDao.getOrgMapInIds(orgIds));
     }
 }

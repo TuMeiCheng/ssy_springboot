@@ -7,9 +7,10 @@ package com.wande.ssy.enums;
  */
 public enum ItemStatus {
 	// 器材 and 场地 状态枚举类共用 ,0正常,1报修,2报废
-	NORMAL(0, "正常"),		// 正常
-	REPAIR(1, "报修"),		// 报修
-	ABANDON(2, "报废");		// 报废
+	NOT_INSTALLED(0, "未安装"),	// 未安装
+	NORMAL(1, "正常"),			// 正常
+	REPAIR(2, "报修"),			// 报修
+	ABANDON(3, "报废");			// 报废
 	
 	private int value;
 	private String name;

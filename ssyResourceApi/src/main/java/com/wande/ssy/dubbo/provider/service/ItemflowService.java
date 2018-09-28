@@ -2,6 +2,7 @@ package com.wande.ssy.dubbo.provider.service;
 
 import com.wande.ssy.entity.Admin;
 import com.wande.ssy.entity.ItemFlow;
+import com.wande.ssy.entity.ItemflowExt;
 import com.ynm3k.mvc.model.DataPage;
 import com.ynm3k.mvc.model.RespWrapper;
 
@@ -60,7 +61,7 @@ public interface ItemflowService {
 	 * @param pageSize
 	 * @return
 	 */
-	public RespWrapper<DataPage<ItemFlow>> getItemflowByPage(Admin admin, Map<String, Object> params, int pageNo, int pageSize);
+	public RespWrapper<DataPage<ItemflowExt>> getItemflowByPage(Admin admin, Map<String, Object> params, int pageNo, int pageSize);
 	
 	/**
 	 * 根据传入的itemflowIds获取Map<itemflowId, Itemflow>的数据

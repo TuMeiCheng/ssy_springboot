@@ -174,6 +174,6 @@ public class AdminServImpl implements AdminService {
 
     @Override
     public RespWrapper<Map<Long, Admin>> getAdminMapInIds(String adminIds) {
-        return null;
+        return RespWrapper.makeResp(0, "", this.adminDao.getAdminMapInIds(adminIds));
     }
 }

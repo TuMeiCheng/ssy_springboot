@@ -3,7 +3,6 @@ package com.wande.ssy;
 
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.wande.ssy.dubbo.provider.service.UserService;
-import com.wande.ssy.entity.User;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -11,8 +10,6 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 import org.springframework.context.annotation.ImportResource;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import javax.validation.Valid;
 
 @SpringBootApplication
 @RestController
@@ -33,8 +30,9 @@ public class ManagerApplication extends SpringBootServletInitializer {
     private UserService userService;
 
     @RequestMapping("/")
-    public Object getInfo(@Valid User user){
-        return userService.addUser(user);
+    public Object getInfo(){
+
+        return "索拉卡赶集网";
     }
 	
 }

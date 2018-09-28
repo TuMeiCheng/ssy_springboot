@@ -2,10 +2,12 @@ package com.wande.ssy.dubbo.provider.service.impl;
 
 import com.alibaba.dubbo.config.annotation.Service;
 import com.wande.ssy.dao.AreaDao;
+import com.wande.ssy.dao.ItemDao;
 import com.wande.ssy.dao.RegionDao;
 import com.wande.ssy.dubbo.provider.service.AreaService;
 import com.wande.ssy.entity.Admin;
 import com.wande.ssy.entity.Area;
+import com.wande.ssy.entity.Item;
 import com.wande.ssy.entity.Region;
 import com.wande.ssy.utils.CopyPropertiesUtils;
 import com.ynm3k.mvc.model.DataPage;
@@ -13,6 +15,7 @@ import com.ynm3k.mvc.model.RespWrapper;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -24,6 +27,10 @@ public class AreaServiceImpl implements AreaService{
 
     @Autowired
     private RegionDao regionDao;
+
+    @Autowired
+    private ItemDao itemDao ;
+
 
 
     /* 添加场地
@@ -105,12 +112,40 @@ public class AreaServiceImpl implements AreaService{
 
     @Override
     public RespWrapper<Map<Integer, Area>> getAreaMapInIds(String areaIds) {
-        return null;
+        return RespWrapper.makeResp(0, "", this.areaDao.getAreaMapInIds(areaIds));
     }
 
+
+    //根据二维码 获取场地详情
     @Override
     public RespWrapper<Map<String, Object>> getAreaDetailsByQrcode(String qrcode) {
-        return null;
+
+        Map<String, Object> param_map = new HashMap<String,Object>();
+        int areaId = 0;
+        if(qrcode.length()<5) {  // itemsn 传的是 areaid
+            areaId = Integer.parseInt(qrcode);
+        }else {  // itemsn传的是 二维码qrcode
+            //根据二维码qrocde先获取场地id
+            areaId = areaDao.getAreaIdByQrcode(qrcode);
+        }
+
+        if(areaId == 0) {
+            return RespWrapper.makeResp(1001, "该场地不存在!", null);
+        }
+        //获取场地信息
+
+        //现在场地查询不传 itemsn 直接传areaId过来了
+
+        Area area = areaDao.getOneArea(areaId);
+        if(area == null) {
+            return RespWrapper.makeResp(1001, "该场地不存在!", null);
+        }
+        //获取该场地下的所有器材
+        List<Item> items = itemDao.getItemsByAreaId(areaId);
+        param_map.put("items", items);
+        param_map.put("area", area);
+        param_map.put("items_size",items.size());  //该场地下的器材数量
+        return RespWrapper.makeResp(0, "", param_map);
     }
 
     @Override

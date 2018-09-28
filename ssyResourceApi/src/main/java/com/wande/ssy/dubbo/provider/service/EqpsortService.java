@@ -66,5 +66,5 @@ public interface EqpsortService {
 	 * @param EqpSortIds
 	 * @return
 	 */
-	public RespWrapper<Map<Integer, EqpSort>> getEqpSortMapInIds(String EqpSortIds);
+	RespWrapper<Map<Integer, EqpSort>> getEqpsortMapInIds(String EqpSortIds);
 }

@@ -15,6 +15,7 @@ import java.util.Map;
 
 @Service(interfaceClass = EqpsortService.class)
 public class EqpsortServiceImpl implements EqpsortService {
+
     @Autowired
     private EqpSortDao eqpSortDao;
 
@@ -99,7 +100,7 @@ public class EqpsortServiceImpl implements EqpsortService {
     }
 
     @Override
-    public RespWrapper<Map<Integer, EqpSort>> getEqpSortMapInIds(String EqpSortIds) {
-        return null;
+    public RespWrapper<Map<Integer, EqpSort>> getEqpsortMapInIds(String EqpSortIds) {
+        return RespWrapper.makeResp(0, "", this.eqpSortDao.getEqpsortMapInIds(EqpSortIds));
     }
 }

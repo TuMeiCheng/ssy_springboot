@@ -8,7 +8,9 @@ import com.wande.ssy.utils.StringUtil;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Repository
 public class EqpSortDaoImpl implements EqpSortDao {
@@ -95,6 +97,31 @@ public class EqpSortDaoImpl implements EqpSortDao {
             e.printStackTrace();
         }
         return new ArrayList<EqpSort>();
+    }
+
+    /**
+     * 根据eqpsortIds 获取eqpsort列表, 用于优化查询数据, 少查SQL
+     * @param eqpsortIds
+     * @return
+     */
+    @Override
+    public Map<Integer, EqpSort> getEqpsortMapInIds(String eqpsortIds) {
+
+        eqpsortIds = StringUtil.isEmpty(eqpsortIds) ? "''" : eqpsortIds;
+        Map<Integer, EqpSort> list = new HashMap<Integer, EqpSort>();
+        //查询数据
+        String sql="select * from eqp_eqpsort where eqpsortId in(" + eqpsortIds + ")";
+        try {
+            List<EqpSort> list2 = new EqpSort().find(sql);
+            for (EqpSort eqpSort : list2) {
+                list.put(eqpSort.getEqpsortId(),eqpSort);
+            }
+            return list;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return new HashMap<Integer, EqpSort>();
+
     }
 
 

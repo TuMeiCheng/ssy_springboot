@@ -127,7 +127,7 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public RespWrapper<Map<Long, User>> getUserMapInIds(String userIds) {
-		return null;
+		return RespWrapper.makeResp(0, "", this.userDao.getUserMapInIds(userIds));
 	}
 
 	@Override

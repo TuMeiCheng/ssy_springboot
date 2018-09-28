@@ -1,7 +1,10 @@
 package com.wande.ssy.dao.impl;
 
+import com.jfinal.plugin.activerecord.Db;
 import com.jfinal.plugin.activerecord.Page;
+import com.jfinal.plugin.activerecord.Record;
 import com.wande.ssy.dao.AreaDao;
+import com.wande.ssy.dao.RegionDao;
 import com.wande.ssy.entity.Admin;
 import com.wande.ssy.entity.Area;
 import com.wande.ssy.utils.DataFilter;
@@ -11,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -19,6 +23,11 @@ public class AreaDaoImpl implements AreaDao{
 
     @Autowired
     private DataFilter dataFilter ;
+
+    @Autowired
+    private RegionDao regionDao ;
+
+
 
 
     /* 判断是否存在该场地
@@ -136,5 +145,65 @@ public class AreaDaoImpl implements AreaDao{
     @Override
     public Area getOneArea(Integer id) {
         return new Area().findById(id);
+    }
+
+    /**
+     * 根据左侧树形点击的行政区域ID查找所有场地ids
+     */
+    @Override
+    public String getAreaListByRegionId(int regionId) {
+        List<Integer> idList = new ArrayList<Integer>();
+        String regionIds = regionDao.getRegionIdsByPid(regionId);
+        String sql="select areaId as areaId from eqp_area where regionId in(" + regionIds + ")";
+        try {
+            List<Record> list = Db.find(sql);
+            if (list!=null && list.size() >0 ){
+                for (Record record : list) {
+                    Integer id = record.get("areaId");
+                    idList.add(id);
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "''";
+        }
+        String ids = idList.size() == 0 || idList == null ? "''" : com.wande.ssy.utils.StringUtil.join(idList, ",");
+        return ids;
+    }
+
+    @Override
+    public Map<Integer, Area> getAreaMapInIds(String areaIds) {
+        areaIds = StringUtil.isEmpty(areaIds) ? "''" : areaIds;
+        Map<Integer, Area> list = new HashMap<Integer, Area>();
+        String sql="select * from eqp_area where areaId in(" + areaIds + ")";
+        try {
+            List<Area> lists = new Area().find(sql);
+            for (Area obj : lists) {
+                list.put(obj.getAreaId(), obj);
+            }
+            return list;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return new HashMap<Integer, Area>();
+
+    }
+
+    @Override
+    public int getAreaIdByQrcode(String qrcode) {
+        //查询数据
+        String sql = "select areaId as areaId from eqp_area where qrcode = "+ "'"+qrcode+"'";
+        System.out.println("sql >>: "+sql);
+        try {
+            Record rs = Db.findFirst(sql);
+            if (rs != null) {
+                int areaId = rs.getInt("areaId");
+                return areaId;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return 0;
+
     }
 }

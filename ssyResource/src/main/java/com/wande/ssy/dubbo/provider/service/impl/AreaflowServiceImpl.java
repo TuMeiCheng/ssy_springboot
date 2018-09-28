@@ -20,7 +20,9 @@ public class AreaflowServiceImpl implements AreaflowService {
 
     @Override
     public RespWrapper<Boolean> addItemflow(AreaFlow obj) {
-        return null;
+        Boolean bln = areaFlowDao.insert(obj);
+        return RespWrapper.makeResp(0, "", bln);
+
     }
 
     @Override
