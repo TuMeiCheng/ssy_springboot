@@ -10,6 +10,7 @@ import com.wande.ssy.utils.StringUtil;
 import com.wande.ssy.utils.TreeUtil;
 import com.ynm3k.mvc.model.RespException;
 import com.ynm3k.mvc.model.RespWrapper;
+import com.ynm3k.mvc.webutil.NetUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
@@ -55,12 +56,8 @@ public class RegionController {
         if (StringUtil.isEmpty(obj.getScode()) || !StringUtil.isAcronym(obj.getScode())) {
             throw new RespException(1001, "拼音简称不能为空，且只能输入大写字母!");
         }
-        //TODO 当前登录用户
-        //Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
-        Admin admin = new Admin();
-        admin.setRoleId(1);
-        admin.setUin(8L);
-        admin.setAccount("admin");
+        // 当前登录用户
+        Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
         //封装参数
         obj.setCreateBy(admin.getUin());	//创建人
         obj.setCreateTime(System.currentTimeMillis());	//创建时间,毫秒
@@ -100,13 +97,10 @@ public class RegionController {
      *
      */
     @RequestMapping("/getRegionList")
-    public  Object getRegionList(@RequestParam(value = "parentId",defaultValue = "-1")Integer parentId){
-        //TODO 当前登录用户
-        //Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
-        Admin admin = new Admin();
-        admin.setRoleId(1);
-        admin.setUin(8L);
-        admin.setAccount("admin");
+    public  Object getRegionList(@RequestParam(value = "parentId",defaultValue = "-1")Integer parentId,
+                                 HttpServletRequest request){
+        // 当前登录用户
+        Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
 
         RespWrapper<List<Region>> resp =regionService.getRegionListByParentId(admin, parentId);
         //返回结果
@@ -162,12 +156,8 @@ public class RegionController {
         if (StringUtil.isEmpty(obj.getScode()) || !StringUtil.isAcronym(obj.getScode())) {
             throw new RespException(1001, "拼音简称不能为空，且只能输入大写字母!");
         }
-        //TODO 当前登录用户
-        //Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
-        Admin admin = new Admin();
-        admin.setRoleId(1);
-        admin.setUin(8L);
-        admin.setAccount("admin");
+        // 当前登录用户
+        Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
         //封装数据
         obj.setModifyBy(admin.getUin());				// 创建人
         obj.setModifyTime(System.currentTimeMillis());	// 创建时间,毫秒

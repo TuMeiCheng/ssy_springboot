@@ -1,8 +1,10 @@
 package com.wande.ssy.dao;
 
 import com.wande.ssy.entity.Admin;
+import com.wande.ssy.entity.AdminExt;
 import com.ynm3k.mvc.model.DataPage;
 
+import javax.validation.constraints.NotNull;
 import java.util.Map;
 
 public interface AdminDao {
@@ -38,4 +40,16 @@ public interface AdminDao {
     Map<Long, Admin> getAdminMapInIds(String adminIds);
 
 
+    /**
+     * 根据account获取一条数据
+     * @param account
+     * @return
+     */
+    AdminExt getOneAdminExt(String account);
+
+    /**
+     * 更新系统用户最后登录时间
+     * @return
+     */
+    Boolean updateLastLoginTime(@NotNull(message = "uin不能为空！") Long uin);
 }

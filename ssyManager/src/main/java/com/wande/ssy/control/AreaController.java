@@ -15,6 +15,7 @@ import com.wande.ssy.utils.LogUtil;
 import com.ynm3k.mvc.model.DataPage;
 import com.ynm3k.mvc.model.RespException;
 import com.ynm3k.mvc.model.RespWrapper;
+import com.ynm3k.mvc.webutil.NetUtil;
 import com.ynm3k.utils.string.StringUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.BindingResult;
@@ -65,12 +66,7 @@ public class AreaController {
             log.info("添加Area场地，参数错误：{}",fieldError.getDefaultMessage());
             return new RespWrapper(1001,fieldError.getDefaultMessage(),null);
         }
-        //TODO 当前登录用户
-        //Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
-        Admin admin = new Admin();
-        admin.setRoleId(1);
-        admin.setUin(8L);
-        admin.setAccount("admin");
+        Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
 
         //封装参数
         obj.setAgencyId(admin.getUin());				// 管理公司ID
@@ -93,13 +89,10 @@ public class AreaController {
                               @RequestParam(value = "pageSize",defaultValue = "20") Integer pageSize,
                               @RequestParam(value = "keyword",defaultValue ="") String keyword,
                               @RequestParam(value = "regionId",defaultValue = "-1") Integer regionId,
-                              @RequestParam(value = "areaType",defaultValue = "-1") Integer areaType){
-        //TODO 当前登录用户
-        //Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
-        Admin admin = new Admin();
-        admin.setRoleId(1);
-        admin.setUin(8L);
-        admin.setAccount("admin");
+                              @RequestParam(value = "areaType",defaultValue = "-1") Integer areaType,
+                              HttpServletRequest request){
+
+        Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户
 
         //设置参数,调用远程Service
         Map<String,Object> params = new HashMap<String,Object>();
@@ -136,14 +129,8 @@ public class AreaController {
      * 根据当前登录角色过滤场地下拉选列表
      */
     @RequestMapping("/getAreaSelect")
-    public Object getAreaSelect(){
-        //TODO 当前登录用户
-        //Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
-        Admin admin = new Admin();
-        admin.setRoleId(2);
-        admin.setUin(38L);
-        admin.setAccount("syx01");
-
+    public Object getAreaSelect(HttpServletRequest request){
+        Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
        return areaService.getAreaSelect(admin);
     }
 
@@ -173,12 +160,7 @@ public class AreaController {
             log.info("【更新场地】，{}参数错误： {} ",attribute,fieldError.getDefaultMessage());
             return new RespWrapper(1001,"【"+attribute+"】"+fieldError.getDefaultMessage(),null);
         }
-        //TODO 当前登录用户
-        //Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
-        Admin admin = new Admin();
-        admin.setRoleId(1);
-        admin.setUin(8L);
-        admin.setAccount("admin");
+        Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
 
         RespWrapper<Area> rObj = this.areaService.getOneArea(obj.getAreaId());
         if (rObj.getErrCode() != 0 || rObj.getObj() == null) {

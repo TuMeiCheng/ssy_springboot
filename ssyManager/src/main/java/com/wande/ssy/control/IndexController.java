@@ -14,10 +14,12 @@ import com.wande.ssy.utils.StringUtil;
 import com.ynm3k.mvc.model.RespException;
 import com.ynm3k.mvc.model.RespWrapper;
 import com.ynm3k.mvc.model.SuperBean;
+import com.ynm3k.mvc.webutil.NetUtil;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.*;
 
 @RestController
@@ -48,13 +50,14 @@ public class IndexController {
     public  Object getAreaItemCount(@RequestParam(value = "provinceId",defaultValue = "0") Integer provinceId, // 省份ID
                                     @RequestParam(value = "cityId",defaultValue = "0") Integer cityId, // 城市ID
                                     @RequestParam(value = "regionId",defaultValue = "0") Integer regionId, // 地区ID
-                                    @RequestParam(value = "eqpsortId",defaultValue = "0") Integer eqpsortId){ // 分类ID
-        //TODO 当前登录用户
-        //Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
-        Admin admin = new Admin();
-        admin.setRoleId(2);
-        admin.setUin(8L);
-        admin.setAccount("admin");
+                                    @RequestParam(value = "eqpsortId",defaultValue = "0") Integer eqpsortId,
+                                    HttpServletRequest request){ // 分类ID
+        // 当前登录用户
+        Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
+       
+      
+       
+       
 
         int parentId = regionId != 0 ? regionId : cityId != 0 ? cityId : provinceId != 0 ? provinceId : 0;
 
@@ -81,13 +84,10 @@ public class IndexController {
     public Object getEqpSafeChart(@RequestParam(value = "provinceId",defaultValue = "0") Integer provinceId,
                                   @RequestParam(value = "cityId",defaultValue = "0") Integer cityId,
                                   @RequestParam(value = "regionId",defaultValue = "0") Integer regionId,
-                                  @RequestParam(value = "eqpsortId",defaultValue = "0") Integer eqpsortId){
-        //TODO 当前登录用户
-        //Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
-        Admin admin = new Admin();
-        admin.setRoleId(2);
-        admin.setUin(8L);
-        admin.setAccount("admin");
+                                  @RequestParam(value = "eqpsortId",defaultValue = "0") Integer eqpsortId,
+                                  HttpServletRequest request){
+        // 当前登录用户
+        Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
 
         Integer parentId = regionId != 0 ? regionId : cityId != 0 ? cityId : provinceId != 0 ? provinceId : 0;
 
@@ -151,13 +151,10 @@ public class IndexController {
     public Object getEqpStatusChart(@RequestParam(value = "provinceId",defaultValue = "0") Integer provinceId,
                                     @RequestParam(value = "cityId",defaultValue = "0") Integer cityId,
                                     @RequestParam(value = "regionId",defaultValue = "0") Integer regionId,
-                                    @RequestParam(value = "eqpsortId",defaultValue = "0") Integer eqpsortId){
-        //TODO 当前登录用户
-        //Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
-        Admin admin = new Admin();
-        admin.setRoleId(2);
-        admin.setUin(8L);
-        admin.setAccount("admin");
+                                    @RequestParam(value = "eqpsortId",defaultValue = "0") Integer eqpsortId,
+                                    HttpServletRequest request){
+        // 当前登录用户
+        Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
         int parentId = regionId != 0 ? regionId : cityId != 0 ? cityId : provinceId != 0 ? provinceId : 0;
 
         //设置参数,调用远程Service
@@ -198,14 +195,10 @@ public class IndexController {
     public Object getEqpTimeChart(@RequestParam(value = "provinceId",defaultValue = "0") Integer provinceId,
                                   @RequestParam(value = "cityId",defaultValue = "0") Integer cityId,
                                   @RequestParam(value = "regionId",defaultValue = "0") Integer regionId,
-                                  @RequestParam(value = "eqpsortId",defaultValue = "0") Integer eqpsortId){
-        //TODO 当前登录用户
-        //Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
-        Admin admin = new Admin();
-        admin.setRoleId(2);
-        admin.setUin(8L);
-        admin.setAccount("admin");
-
+                                  @RequestParam(value = "eqpsortId",defaultValue = "0") Integer eqpsortId ,
+                                  HttpServletRequest request){
+        // 当前登录用户
+        Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
         int parentId = regionId != 0 ? regionId : cityId != 0 ? cityId : provinceId != 0 ? provinceId : 0;
         //设置参数,调用远程Service
         Map<String,Object> params = new HashMap<String,Object>();
@@ -231,13 +224,10 @@ public class IndexController {
                                       @RequestParam(value = "cityId",defaultValue = "0") Integer cityId,
                                       @RequestParam(value = "regionId",defaultValue = "0") Integer regionId,
                                       @RequestParam(value = "eqpsortId",defaultValue = "0") Integer eqpsortId,
-                                      @RequestParam(value = "areaId",defaultValue = "0") Integer areaId) { //场地ID
-        //TODO 当前登录用户
-        //Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
-        Admin admin = new Admin();
-        admin.setRoleId(2);
-        admin.setUin(8L);
-        admin.setAccount("admin");
+                                      @RequestParam(value = "areaId",defaultValue = "0") Integer areaId,
+                                      HttpServletRequest request) {
+        // 当前登录用户
+        Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
 
         int parentId = regionId != 0 ? regionId : cityId != 0 ? cityId : provinceId != 0 ? provinceId : 0;
 
@@ -258,14 +248,10 @@ public class IndexController {
      * 获取首页报表下拉选初始化值
     */
     @RequestMapping("/getSelectValue")
-    public Object getSelectValue(){
-
-        //TODO 当前登录用户
-        //Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
-        Admin admin = new Admin();
-        admin.setRoleId(2);
+    public Object getSelectValue(HttpServletRequest request){
+        // 当前登录用户
+        Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
         admin.setUin(10L);
-        admin.setAccount("admin");
 
         // -1 获取该登录用户的拥有的所有地区
         RespWrapper<List<Region>> resp = regionService.getRegionListByParentId(admin, -1);
@@ -334,15 +320,11 @@ public class IndexController {
     public Object getSupplierChart(@RequestParam(value = "provinceId",defaultValue = "0") Integer provinceId,
                                    @RequestParam(value = "cityId",defaultValue = "0") Integer cityId,
                                    @RequestParam(value = "regionId",defaultValue = "0") Integer regionId,
-                                   @RequestParam(value = "eqpsortId",defaultValue = "0") Integer eqpsortId){
+                                   @RequestParam(value = "eqpsortId",defaultValue = "0") Integer eqpsortId,
+                                   HttpServletRequest request){
 
-        //TODO 当前登录用户
-        //Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
-        Admin admin = new Admin();
-        admin.setRoleId(2);
-        admin.setUin(8L);
-        admin.setAccount("admin");
-
+        // 当前登录用户
+        Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
         int parentId = regionId != 0 ? regionId : cityId != 0 ? cityId : provinceId != 0 ? provinceId : 0;
         //设置参数,调用远程Service
         Map<String,Object> params = new HashMap<String,Object>();

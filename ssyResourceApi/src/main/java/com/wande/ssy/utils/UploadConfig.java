@@ -29,6 +29,7 @@ public class UploadConfig {
 	public static final String Excel_repair_Dir  = "/upload/excel/repair/";	//导出巡检记录excel文件目录
 	public static final String Excel_Qrcode_Dir  = "/upload/excel/qrcode/";	//导出二维码记录excel文件目录
 	public static final String Excel_Item_Dir    = "/upload/excel/item/";	//导出器材记录excel文件目录
+
 	
 	/**
 	 * 根据 上传类型获取对应上传路径
@@ -42,7 +43,7 @@ public class UploadConfig {
 	
 	/**=====================   截取视频图片的设置    ======================*/
 	public static final String FFMPEG_DIR = "D:\\Program Files\\ffmpeg\\bin\\ffmpeg.exe";
-	public static final int FFMPEG_WIDTH = 850;	//截取宽度
+	public static final int FFMPEG_WIDTH = 850;		//截取宽度
 	public static final int FFMPEG_HEIGHT = 480;	//截取高度
 	public static final int FFMPEG_HOUT = 0;	//截取的小时
 	public static final int FFMPEG_MIN = 0;		//截取的分钟
@@ -51,7 +52,31 @@ public class UploadConfig {
 	/**=====================   APP    ======================*/
 	public static final float appVersion = 1.1F;
 	public static final String appDownloadUrl = "/api/app/download";
-	
+
+
+
+	/**
+	 * 根据 上传类型获取对应上传路径
+	 * 目前只有video和videoImg
+	 *
+	 * @param dir
+	 * @return
+	 */
+	public static final String getUploadDir(String dir) {
+		if (dir.equals("video")) {
+			UploadUtil.setAllowMedia("mp4");
+			UploadUtil.setMaxSize(1024*1024*50);
+			return Upload_DIR + Upload_media;
+		}
+		if (dir.equals("videoImg")) {
+			UploadUtil.setMaxSize(1024*1024*2);
+			return Upload_DIR + Upload_mediaImg;
+		}
+		return Upload_DIR + Upload_other;
+	}
+
+
+
 	/**
 	 * 获取APP版本号
 	 * 
@@ -59,8 +84,8 @@ public class UploadConfig {
 	 */
 	public static Float getAppVersion() {
 		return appVersion;
-	}	
-	
+	}
+
 	/**
 	 * 获取APP下载路径
 	 * 

@@ -1,7 +1,10 @@
 package com.wande.ssy.control;
 
 import com.alibaba.dubbo.config.annotation.Reference;
-import com.wande.ssy.dubbo.provider.service.*;
+import com.wande.ssy.dubbo.provider.service.AdminService;
+import com.wande.ssy.dubbo.provider.service.EqpService;
+import com.wande.ssy.dubbo.provider.service.QrcodeService;
+import com.wande.ssy.dubbo.provider.service.SupplierService;
 import com.wande.ssy.entity.*;
 import com.wande.ssy.enums.AdminRole;
 import com.wande.ssy.enums.QrcodeStatus;
@@ -12,6 +15,7 @@ import com.wande.ssy.utils.UploadConfig;
 import com.ynm3k.mvc.model.DataPage;
 import com.ynm3k.mvc.model.RespException;
 import com.ynm3k.mvc.model.RespWrapper;
+import com.ynm3k.mvc.webutil.NetUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
@@ -74,12 +78,9 @@ public class QrcodeController {
         if (qrcodeNum > 50) {
             throw new RespException(1001, "生成二维码数量不能大于50个!");
         }
-        //TODO 当前登录用户
-        //Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
-        Admin admin = new Admin();
-        admin.setRoleId(1);
-        admin.setUin(8L);
-        admin.setAccount("admin");
+        // 当前登录用户
+        Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
+
         //封装参数
         //调用远程Service
         RespWrapper<String> resp = qrcodeService.addQrcode(qrcodeNum, obj.getAreaId(), obj.getStandardcode(), admin, obj.getIsAreaQrcode());
@@ -110,14 +111,11 @@ public class QrcodeController {
      * 导出二维码(未出厂)
     */
     @RequestMapping("/exportQrcode")
-    public Object exportQrcode(HttpServletResponse response){
+    public Object exportQrcode(HttpServletResponse response,
+                               HttpServletRequest request){
 
-        //TODO 当前登录用户
-        //Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
-        Admin admin = new Admin();
-        admin.setRoleId(1);
-        admin.setUin(8L);
-        admin.setAccount("admin");
+        // 当前登录用户
+        Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
 
         RespWrapper<List<Qrcode>> resp = qrcodeService.getExportList();
         if (resp.getErrCode() != 0) {
@@ -192,14 +190,10 @@ public class QrcodeController {
                                 @RequestParam(value = "pageSize",defaultValue = "20") Integer pageSize,
                                 @RequestParam(value = "startTime",defaultValue ="0") Long startTime,
                                 @RequestParam(value = "endTime",defaultValue = "0") Integer endTime,
-                                @RequestParam(value = "areaType",defaultValue = "0") Integer areaType){
-        //TODO 当前登录用户
-        //Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
-        Admin admin = new Admin();
-        admin.setRoleId(1);
-        admin.setUin(8L);
-        admin.setAccount("admin");
-
+                                @RequestParam(value = "areaType",defaultValue = "0") Integer areaType,
+                                HttpServletRequest request){
+        // 当前登录用户
+        Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
         if (startTime != 0 && endTime != 0 && startTime > endTime) {
             throw new RespException(1001, "开始时间必须小于结束时间!");
         }
@@ -236,14 +230,11 @@ public class QrcodeController {
                                 @RequestParam(value = "endTime",defaultValue = "0") Long endTime, //结束时间
                                 @RequestParam(value = "keyword",defaultValue = "") String keyword, //关键字:二维码编号
                                 @RequestParam(value = "pageNo",defaultValue = "1") Integer pageNo, //当前页
-                                @RequestParam(value = "pageSize",defaultValue = "20") Integer pageSize){
+                                @RequestParam(value = "pageSize",defaultValue = "20") Integer pageSize,
+                                HttpServletRequest request){
 
-        //TODO 当前登录用户
-        //Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
-        Admin admin = new Admin();
-        admin.setRoleId(1);
-        admin.setUin(8L);
-        admin.setAccount("admin");
+        // 当前登录用户
+        Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
 
         if (startTime != 0 && endTime != 0 && startTime > endTime) {
             throw new RespException(1001, "开始时间必须小于结束时间!");

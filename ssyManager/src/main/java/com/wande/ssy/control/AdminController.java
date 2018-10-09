@@ -12,6 +12,7 @@ import com.wande.ssy.utils.LogUtil;
 import com.ynm3k.mvc.model.DataPage;
 import com.ynm3k.mvc.model.RespException;
 import com.ynm3k.mvc.model.RespWrapper;
+import com.ynm3k.mvc.webutil.NetUtil;
 import com.ynm3k.utils.string.StringUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.BindingResult;
@@ -63,12 +64,8 @@ public class AdminController {
              return new RespWrapper(1001,fieldError.getDefaultMessage(),null);
          }
 
-         //TODO 当前登录用户
-         //Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
-         Admin admin = new Admin();
-         admin.setRoleId(1);
-         admin.setUin(8L);
-         admin.setAccount("admin");
+         Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
+         System.out.println(admin.toString());
          //封装数据
          obj.setCreateBy(admin.getUin());	            // 创建人
          obj.setRoleId(AdminRole.AGENCY.getValue());    // 系统用户角色
@@ -99,13 +96,7 @@ public class AdminController {
                 log.info("添加Admin体育局账户，参数错误：{}",fieldError.getDefaultMessage());
                 return new RespWrapper(1001,fieldError.getDefaultMessage(),null);
             }
-
-            //TODO 当前登录用户
-            //Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
-            Admin admin = new Admin();
-            admin.setRoleId(1);
-            admin.setUin(8L);
-            admin.setAccount("admin");
+            Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
             //封装数据
             obj.setCreateBy(admin.getUin());	            // 创建人
             obj.setRoleId(AdminRole.ORG.getValue());		// 体育局 角色
@@ -123,7 +114,8 @@ public class AdminController {
         @RequestMapping("/changePwd")
        public Object ChangePwd(@RequestParam("oldPwd") String oldPwd,      //旧密码
                                @RequestParam("newPwd1") String newPwd1     //新密码
-                               ,@RequestParam("newPwd2") String newPwd2){  //新密码（第二次）
+                               ,@RequestParam("newPwd2") String newPwd2,
+                               HttpServletRequest request){  //新密码（第二次）
 
             //校验参数
             if (StringUtil.isEmpty(oldPwd)) {
@@ -135,12 +127,8 @@ public class AdminController {
             if (!newPwd1.equals(newPwd2)) {
                 throw new RespException(1001, "两次密码输入不一致!");
             }
-            //TODO 当前登录用户
-            //Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
-            Admin admin = new Admin();
-            admin.setRoleId(1);
-            admin.setUin(8L);
-            admin.setAccount("admin");
+
+            Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
             //调用远程服务
             RespWrapper resp = this.adminService.changePwd(admin.getAccount(),oldPwd,newPwd1);
             return resp;
@@ -242,12 +230,8 @@ public class AdminController {
 
 
         }
-        //TODO 当前登录用户
-        //Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
-        Admin admin = new Admin();
-        admin.setRoleId(1);
-        admin.setUin(8L);
-        admin.setAccount("admin");
+
+        Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
 
         //封装参数
         obj.setModifyBy(admin.getUin());		// 修改人
@@ -277,12 +261,8 @@ public class AdminController {
             log.info("【修改admin系统账户】，参数错误：{}",fieldError.getDefaultMessage());
             return new RespWrapper(1001,fieldError.getDefaultMessage(),null);
         }
-        //TODO 当前登录用户
-        //Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
-        Admin admin = new Admin();
-        admin.setRoleId(1);
-        admin.setUin(8L);
-        admin.setAccount("admin");
+        Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
+        System.out.println(admin.toString());
         //封装参数
         obj.setModifyBy(admin.getUin());		// 修改人
         RespWrapper resp =  this.adminService.updateAdmin(obj,"");
@@ -310,12 +290,8 @@ public class AdminController {
             log.info("【修改admin系统账户】，参数错误：{}",fieldError.getDefaultMessage());
             return new RespWrapper(1001,fieldError.getDefaultMessage(),null);
         }
-        //TODO 当前登录用户
-        //Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
-        Admin admin = new Admin();
-        admin.setRoleId(1);
-        admin.setUin(8L);
-        admin.setAccount("admin");
+
+        Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
         //封装参数
         obj.setModifyBy(admin.getUin());		// 修改人
         RespWrapper resp =  this.adminService.updateAdmin(obj,"");
@@ -324,8 +300,5 @@ public class AdminController {
         }
         return resp;
     }
-
-
-
 
 }

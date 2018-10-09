@@ -10,6 +10,7 @@ import com.wande.ssy.utils.LogUtil;
 import com.wande.ssy.utils.TreeUtil;
 import com.ynm3k.mvc.model.RespException;
 import com.ynm3k.mvc.model.RespWrapper;
+import com.ynm3k.mvc.webutil.NetUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
@@ -50,12 +51,8 @@ public class EqpSortController {
             log.info("【添加器材分类EqpSort】，{}参数错误： {} ",attribute,fieldError.getDefaultMessage());
             return new RespWrapper(1001,"【 "+attribute+" 】"+fieldError.getDefaultMessage(),null);
         }
-        //TODO 当前登录用户
-        //Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
-        Admin admin = new Admin();
-        admin.setRoleId(2);
-        admin.setUin(30L);
-        admin.setAccount("admin");
+        // 当前登录用户
+        Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
         //封装数据
         obj.setCreateBy(admin.getUin());	            // 创建人
         obj.setCreateTime(System.currentTimeMillis());	// 创建时间,毫秒
@@ -124,12 +121,8 @@ public class EqpSortController {
             log.info("【更新器材分类EqpSort】，{}参数错误： {} ",attribute,fieldError.getDefaultMessage());
             return new RespWrapper(1001,"【 "+attribute+" 】"+fieldError.getDefaultMessage(),null);
         }
-        //TODO 当前登录用户
-        //Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
-        Admin admin = new Admin();
-        admin.setRoleId(2);
-        admin.setUin(30L);
-        admin.setAccount("admin");
+        // 当前登录用户
+        Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
         //封装参数
         obj.setModifyBy(admin.getUin());		//修改人
         obj.setModifyTime(System.currentTimeMillis());	//修改时间

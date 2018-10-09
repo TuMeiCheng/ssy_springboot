@@ -19,7 +19,7 @@ public class Admin extends Model<Admin> {
     private String email;		// 邮箱
     private String phone;		// 电话
     private Long    status;		// 状态 0 正常 10 禁用
-    private Long   logLongime;	// 上一次登录时间
+    private Long   loginTime;	// 上一次登录时间
     private String loginIp;		// 最后登录IP
     private Long   createTime;	// 创建时间
     private Long   createBy;	// 创建人
@@ -132,12 +132,12 @@ public class Admin extends Model<Admin> {
         set("status",status);
     }
 
-    public Long getLogLongime() {
-        return get("logLongime");
+    public Long getLoginTime() {
+        return get("loginTime");
     }
 
-    public void setLogLongime(Long logLongime) {
-        set("logLongime",logLongime);
+    public void setLoginTime(Long loginTime) {
+        set("loginTime",loginTime);
     }
 
     public String getLoginIp() {

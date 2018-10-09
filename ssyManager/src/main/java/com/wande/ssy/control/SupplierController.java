@@ -10,6 +10,7 @@ import com.wande.ssy.utils.LogUtil;
 import com.ynm3k.mvc.model.DataPage;
 import com.ynm3k.mvc.model.RespException;
 import com.ynm3k.mvc.model.RespWrapper;
+import com.ynm3k.mvc.webutil.NetUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
@@ -66,12 +67,8 @@ public class SupplierController {
             log.info("【添加供应商Supplier】，{}参数错误： {} ",attribute,fieldError.getDefaultMessage());
             return new RespWrapper(1001,"【 "+attribute+" 】"+fieldError.getDefaultMessage(),null);
         }
-        //TODO 当前登录用户
-        //Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
-        Admin admin = new Admin();
-        admin.setRoleId(1);
-        admin.setUin(8L);
-        admin.setAccount("admin");
+        // 当前登录用户
+        Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
         //封装参数
         obj.setStatus(0);					// 1启用，0禁止
         obj.setCreateBy(admin.getUin());	//创建人
@@ -135,11 +132,8 @@ public class SupplierController {
             log.info("【更新器材供应商Supplier】，{}参数错误： {} ",attribute, fieldError.getDefaultMessage());
             return new RespWrapper(1001,"【 "+attribute+" 】"+fieldError.getDefaultMessage(),null);
         }
-        //TODO 当前登录用户
-        //Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
-        Admin admin = new Admin();
-        admin.setRoleId(1);
-        admin.setUin(8L);
+        // 当前登录用户
+        Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
         admin.setAccount("admin");
         //封装参数
         obj.setModifyBy(admin.getUin());				// 最后修改人

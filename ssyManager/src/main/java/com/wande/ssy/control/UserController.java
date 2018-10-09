@@ -16,6 +16,7 @@ import com.ynm3k.mvc.model.DataPage;
 import com.ynm3k.mvc.model.RespException;
 import com.ynm3k.mvc.model.RespWrapper;
 import com.ynm3k.mvc.model.SuperBean;
+import com.ynm3k.mvc.webutil.NetUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
@@ -95,11 +96,8 @@ public class UserController {
      * @param: []
      * @return: java.lang.Object */
     @RequestMapping("/GetItemBySelect")
-    public Object GetItemBySelect(){
-        //TODO
-        //Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
-        Admin admin = new Admin();
-        admin.setRoleId(1);
+    public Object GetItemBySelect(HttpServletRequest request){
+        Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
         RespWrapper<List<Item>> resp =this.userService.getItemBySelect(admin);
         if (resp.getErrCode() != 0 && resp.getObj() == null) {
             throw new RespException(resp.getErrCode(), resp.getErrMsg());
@@ -132,11 +130,10 @@ public class UserController {
 
 
     @RequestMapping("/getUserInfo")
-    public Object getUserInfo(@RequestParam(value = "name",defaultValue = "") String  name ){
-        //TODO
-        //Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
-        Admin admin = new Admin();
-        admin.setRoleId(1);
+    public Object getUserInfo(@RequestParam(value = "name",defaultValue = "") String  name,
+                              HttpServletRequest request){
+
+        Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
         //参数校验
         if (StringUtil.isEmpty(name) ) {
             throw new RespException(1001, "******");
@@ -152,12 +149,9 @@ public class UserController {
     @RequestMapping("/GetUserPage")
     public  Object GetUserPage(@RequestParam(value = "pageNo",defaultValue = "1") Integer pageNo,
                                @RequestParam(value = "pageSize",defaultValue = "20") Integer pageSize,
-                               @RequestParam(value = "keyword",defaultValue = "") String keyword){
-        //TODO
-        //Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
-        Admin admin = new Admin();
-        admin.setRoleId(1);
-        admin.setUin(8L);
+                               @RequestParam(value = "keyword",defaultValue = "") String keyword,
+                               HttpServletRequest request){
+        Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
 
         //设置参数,调用远程Service
         Map<String,Object> params = new HashMap<String,Object>();

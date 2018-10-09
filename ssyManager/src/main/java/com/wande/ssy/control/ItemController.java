@@ -11,6 +11,7 @@ import com.ynm3k.mvc.model.DataPage;
 import com.ynm3k.mvc.model.RespException;
 import com.ynm3k.mvc.model.RespWrapper;
 import com.ynm3k.mvc.model.SuperBean;
+import com.ynm3k.mvc.webutil.NetUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -70,13 +71,10 @@ public class ItemController {
                              @RequestParam(value = "regionId",defaultValue = "-1") Integer regionId, //地区id
                              @RequestParam(value = "installYear",defaultValue = "") String installYear, //安装时间
                              @RequestParam(value = "expireYearStr",defaultValue = "") String expireYearStr, //到期时间
-                             HttpServletResponse response){
-        //TODO 当前登录用户
-        //Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
-        Admin admin = new Admin();
-        admin.setRoleId(2);
-        admin.setUin(8L);
-        admin.setAccount("admin");
+                             HttpServletResponse response,
+                             HttpServletRequest request){
+        // 当前登录用户
+       Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
         //封装参数
         Map<String,Object> params = new HashMap<String,Object>();
         params.put("Item",item);
@@ -248,12 +246,8 @@ public class ItemController {
                               @RequestParam(value = "pageNo",defaultValue = "1") Integer pageNo, //当前页
                               @RequestParam(value = "pageSize",defaultValue = "20") Integer pageSize, //页面大小
                               HttpServletRequest request){
-        //TODO 当前登录用户
-        //Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
-        Admin admin = new Admin();
-        admin.setRoleId(2);
-        admin.setUin(8L);
-        admin.setAccount("admin");
+        // 当前登录用户
+       Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
         //封装参数
         Map<String,Object> params = new HashMap<String,Object>();
         params.put("Item",item);

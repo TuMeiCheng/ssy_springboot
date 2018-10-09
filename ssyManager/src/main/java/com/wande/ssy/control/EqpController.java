@@ -13,6 +13,7 @@ import com.wande.ssy.utils.LogUtil;
 import com.ynm3k.mvc.model.DataPage;
 import com.ynm3k.mvc.model.RespException;
 import com.ynm3k.mvc.model.RespWrapper;
+import com.ynm3k.mvc.webutil.NetUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
@@ -61,12 +62,9 @@ public class EqpController {
             log.info("【添加器材Eqp】，{}参数错误： {} ",attribute,fieldError.getDefaultMessage());
             return new RespWrapper(1001,"【 "+attribute+" 】"+fieldError.getDefaultMessage(),null);
         }
-        //TODO 当前登录用户
-        //Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
-        Admin admin = new Admin();
-        admin.setRoleId(2);
-        admin.setUin(30L);
-        admin.setAccount("admin");
+        //当前登录用户
+        Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
+
         //封装数据
         obj.setCreateBy(admin.getUin());	            // 创建人
         obj.setStatus(0);								// 0启用，1禁止
@@ -148,12 +146,9 @@ public class EqpController {
             log.info("【更新器材Eqp】，{}参数错误： {} ",attribute,fieldError.getDefaultMessage());
             return new RespWrapper(1001,"【 "+attribute+" 】"+fieldError.getDefaultMessage(),null);
         }
-        //TODO 当前登录用户
-        //Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
-        Admin admin = new Admin();
-        admin.setRoleId(2);
-        admin.setUin(30L);
-        admin.setAccount("admin");
+        // 当前登录用户
+        Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
+
         //封装数据
         obj.setModifyBy(admin.getUin());	// 最后修改人
         //调用远程服务

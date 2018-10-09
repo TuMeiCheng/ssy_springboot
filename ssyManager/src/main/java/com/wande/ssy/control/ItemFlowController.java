@@ -70,12 +70,8 @@ public class ItemFlowController {
     @RequestMapping("/exportItemflow")
     public Object exportItemflow(HttpServletRequest request,
                                  HttpServletResponse response){
-        //TODO 当前登录用户
-        //Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
-        Admin admin = new Admin();
-        admin.setRoleId(1);
-        admin.setUin(8L);
-        admin.setAccount("admin");
+        // 当前登录用户
+        Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
 
         int    projectId     = NetUtil.getIntParameter(request, "projectId", Integer.MAX_VALUE);	// 项目分类ID
         int    eqpId         = NetUtil.getIntParameter(request, "eqpId", Integer.MAX_VALUE);			// 器材ID
@@ -266,12 +262,8 @@ public class ItemFlowController {
     @RequestMapping("/getItemflowPage")
     public Object getItemflowPage(HttpServletRequest request){
 
-        //TODO 当前登录用户
-        //Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
-        Admin admin = new Admin();
-        admin.setRoleId(1);
-        admin.setUin(8L);
-        admin.setAccount("admin");
+        // 当前登录用户
+        Admin admin = NetUtil.getAttribute(request, "admin", Admin.class); 	// 当前登录用户;
 
         //获取参数
         int    pageNo        = NetUtil.getIntParameter(request, "pageNo", 1);

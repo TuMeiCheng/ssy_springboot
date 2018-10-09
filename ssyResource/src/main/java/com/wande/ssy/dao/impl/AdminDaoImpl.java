@@ -6,12 +6,15 @@ import com.jfinal.plugin.activerecord.Page;
 import com.jfinal.plugin.activerecord.Record;
 import com.wande.ssy.dao.AdminDao;
 import com.wande.ssy.entity.Admin;
+import com.wande.ssy.entity.AdminExt;
 import com.ynm3k.mvc.model.DataPage;
 import com.ynm3k.utils.crypto.MD5Coding;
 import com.ynm3k.utils.string.StringUtil;
 import org.springframework.stereotype.Repository;
 
+import javax.validation.constraints.NotNull;
 import java.io.UnsupportedEncodingException;
+import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -170,6 +173,72 @@ public class AdminDaoImpl implements AdminDao{
         return new HashMap<Long, Admin>();
 
     }
+
+    /**
+     * 根据account获取一条数据
+     * @param account
+     * @return
+     */
+    @Override
+    public AdminExt getOneAdminExt(String account) {
+
+        String sql = "select * from eqp_admin where account='" + StringUtil.encodeSQL(account) +"'";
+        Record record = Db.findFirst(sql);
+        if (record != null) {
+            AdminExt obj = parseToAdminExt(record);
+            return obj;
+        }
+        return null;
+    }
+
+    /**
+     * 更新系统用户最后登录时间
+     * @return
+     */
+    @Override
+    public Boolean updateLastLoginTime(@NotNull(message = "uin不能为空！") Long uin) {
+
+        String sql = "update eqp_admin set loginTime=" +System.currentTimeMillis()+ " where uin="+uin;
+
+        try {
+            int rs = Db.update(sql);
+            if(rs > 0){
+                return true;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+
+    }
+
+
+    /**
+     * DB结果集转实体类AdminExt
+     * @return
+     * @throws SQLException
+     */
+    public AdminExt parseToAdminExt(Record rs){
+        AdminExt obj = new AdminExt();
+        obj.setUin(rs.getLong("uin"));
+        obj.setRoleId(rs.getInt("roleId"));
+        obj.setOrgId(rs.getInt("orgId"));
+        obj.setAccount(rs.getStr("account"));
+        obj.setPwd(rs.getStr("pwd"));
+        obj.setSkey(rs.getInt("skey"));
+        obj.setName(rs.getStr("name"));
+        obj.setEmail(rs.getStr("email"));
+        obj.setPhone(rs.getStr("phone"));
+        obj.setStatus(rs.getInt("status"));
+        obj.setLoginTime(rs.getLong("loginTime"));
+        obj.setLoginIp(rs.getStr("loginIp"));
+        obj.setCreateTime(rs.getLong("createTime"));
+        obj.setCreateBy(rs.getLong("createBy"));
+        obj.setModifyTime(rs.getLong("modifyTime"));
+        obj.setModifyBy(rs.getLong("modifyBy"));
+        return obj;
+    }
+
 
 
 }

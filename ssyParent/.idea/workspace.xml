@@ -44,113 +44,96 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="MobileController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ExecutionTimeAspect.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../ssyManager/src/main/java/com/wande/ssy/aspect/ExecutionTimeAspect.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="249" column="63" lean-forward="false" selection-start-line="249" selection-start-column="44" selection-end-line="249" selection-end-column="63" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MobileController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../ssyManager/src/main/java/com/wande/ssy/control/MobileController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="454">
-              <caret line="250" column="9" lean-forward="true" selection-start-line="250" selection-start-column="9" selection-end-line="250" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AreaService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../ssyResourceApi/src/main/java/com/wande/ssy/dubbo/provider/service/AreaService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="79" column="44" lean-forward="false" selection-start-line="79" selection-start-column="44" selection-end-line="79" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AreaServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dubbo/provider/service/impl/AreaServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2035">
-              <caret line="127" column="32" lean-forward="true" selection-start-line="127" selection-start-column="32" selection-end-line="127" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ItemStatus.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../ssyResourceApi/src/main/java/com/wande/ssy/enums/ItemStatus.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="12" column="37" lean-forward="true" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
-              <folding>
-                <element signature="e#445#446#0" expanded="true" />
-                <element signature="e#464#465#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MsgService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../ssyResourceApi/src/main/java/com/wande/ssy/dubbo/provider/service/MsgService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MsgServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dubbo/provider/service/impl/MsgServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="396">
-              <caret line="20" column="27" lean-forward="false" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
+              <caret line="121" column="28" lean-forward="false" selection-start-line="121" selection-start-column="22" selection-end-line="121" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MsgDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dao/MsgDao.java">
+      <file leaf-file-name="PathUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../ssyManager/src/main/java/com/wande/ssy/utils/PathUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="11" column="11" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="11" />
+            <state relative-caret-position="-837">
+              <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MsgDaoImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dao/impl/MsgDaoImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="30" column="28" lean-forward="false" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
-              <folding>
-                <element signature="e#1014#1015#0" expanded="true" />
-                <element signature="e#1047#1048#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ItemrepairDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dao/ItemrepairDao.java">
+      <file leaf-file-name="AreaController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../ssyManager/src/main/java/com/wande/ssy/control/AreaController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="297">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <caret line="91" column="22" lean-forward="true" selection-start-line="91" selection-start-column="22" selection-end-line="91" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ItemrepairDaoImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dao/impl/ItemrepairDaoImpl.java">
+      <file leaf-file-name="UploadController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../ssyManager/src/main/java/com/wande/ssy/control/UploadController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="469">
-              <caret line="116" column="26" lean-forward="true" selection-start-line="116" selection-start-column="26" selection-end-line="116" selection-end-column="26" />
+            <state relative-caret-position="176">
+              <caret line="112" column="37" lean-forward="true" selection-start-line="112" selection-start-column="37" selection-end-line="112" selection-end-column="37" />
               <folding>
-                <element signature="e#4381#4382#0" expanded="true" />
-                <element signature="e#4439#4440#0" expanded="true" />
-                <element signature="e#4562#4563#0" expanded="true" />
-                <element signature="e#4595#4596#0" expanded="true" />
+                <element signature="e#1066#1085#1" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ServletFileUpload.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/commons-fileupload/commons-fileupload/1.3.3/commons-fileupload-1.3.3.jar!/org/apache/commons/fileupload/servlet/ServletFileUpload.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="693">
+              <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../ssyResourceApi/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1386">
+              <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QrcodeServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dubbo/provider/service/impl/QrcodeServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../ssyResourceApi/src/main/java/com/wande/ssy/utils/qiniu/FileUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="15" column="60" lean-forward="false" selection-start-line="15" selection-start-column="60" selection-end-line="15" selection-end-column="60" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -167,18 +150,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>itemStatusName</find>
-      <find>createDate</find>
-      <find>sourcefromName</find>
-      <find>createName</find>
-      <find>createPhone</find>
-      <find>repairPhone</find>
-      <find>installDate</find>
-      <find>statusNewName</find>
-      <find>leftTime</find>
-      <find>expireDate</find>
-      <find>itemflow</find>
-      <find>repairDate</find>
       <find>createby</find>
       <find>repairName</find>
       <find>30</find>
@@ -197,6 +168,18 @@
       <find>isArea</find>
       <find>addMsg</find>
       <find>retItem</find>
+      <find>loginTime</find>
+      <find>mobile</find>
+      <find>SysURI</find>
+      <find>EqpClient.getAdminService()</find>
+      <find>letPass</find>
+      <find>admin.setAccount(&quot;admin&quot;);</find>
+      <find>prex</find>
+      <find>getLogPage</find>
+      <find>file</find>
+      <find>没有文件上传</find>
+      <find>输入的allowFiles不在读,可选参数有(image, media,file,other),分别代表图片文件,媒体文件,文件,其他文件</find>
+      <find>request</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -219,6 +202,9 @@
       <replace>Hash</replace>
       <replace>set</replace>
       <replace>Set</replace>
+      <replace>adminService</replace>
+      <replace>/ssyManager</replace>
+      <replace>Admin admin = NetUtil.getAttribute(request, &quot;admin&quot;, Admin.class); 	// 当前登录用户;</replace>
     </replaceStrings>
   </component>
   <component name="GradleLocalSettings">
@@ -229,39 +215,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../ssyManager/pom.xml" />
-        <option value="$PROJECT_DIR$/../ssyResourceApi/pom.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/ResourceApplication.java" />
-        <option value="$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/config/ExecutionTimeAspect.java" />
-        <option value="$PROJECT_DIR$/../ssyManager/src/main/java/com/wande/ssy/ManagerApplication.java" />
-        <option value="$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dao/impl/ExportDaoImpl.java" />
-        <option value="$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dao/impl/AdminDaoImpl.java" />
-        <option value="$PROJECT_DIR$/../ssyManager/src/main/java/com/wande/ssy/handler/RespExceptionHandler.java" />
-        <option value="$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dubbo/provider/service/impl/QrcodeServiceImpl.java" />
-        <option value="$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dao/QrcodeDao.java" />
-        <option value="$PROJECT_DIR$/../ssyResourceApi/src/main/java/com/wande/ssy/entity/Qrcode.java" />
-        <option value="$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dubbo/provider/service/impl/EqpServiceImpl.java" />
-        <option value="$PROJECT_DIR$/../ssyManager/src/main/java/com/wande/ssy/aspect/ExecutionTimeAspect.java" />
-        <option value="$PROJECT_DIR$/../ssyManager/src/main/java/com/wande/ssy/control/QrcodeController.java" />
-        <option value="$PROJECT_DIR$/../ssyResourceApi/src/main/java/com/wande/ssy/dubbo/provider/service/ItemrepairService.java" />
-        <option value="$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dao/impl/QrcodeDaoImpl.java" />
-        <option value="$PROJECT_DIR$/../ssyResourceApi/src/main/java/com/wande/ssy/entity/Ab.java" />
-        <option value="$PROJECT_DIR$/../ssyManager/src/main/java/com/wande/ssy/control/ItemController.java" />
-        <option value="$PROJECT_DIR$/../ssyResourceApi/src/main/java/com/wande/ssy/utils/BeanUtil.java" />
-        <option value="$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dubbo/provider/service/impl/BrokenreasonServiceImpl.java" />
-        <option value="$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dao/BrokenreasonDao.java" />
-        <option value="$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dao/impl/BrokenreasonDaoImpl.java" />
-        <option value="$PROJECT_DIR$/../ssyResourceApi/src/main/java/com/wande/ssy/entity/ItemRepair.java" />
-        <option value="$PROJECT_DIR$/../ssyResourceApi/src/main/java/com/wande/ssy/entity/ItemrepairExt.java" />
-        <option value="$PROJECT_DIR$/../ssyManager/src/main/java/com/wande/ssy/control/ItemRepairController.java" />
-        <option value="$PROJECT_DIR$/../ssyResourceApi/src/main/java/com/wande/ssy/dubbo/provider/service/ItemflowService.java" />
-        <option value="$PROJECT_DIR$/../ssyResourceApi/src/main/java/com/wande/ssy/entity/ItemFlow.java" />
-        <option value="$PROJECT_DIR$/../ssyResourceApi/src/main/java/com/wande/ssy/entity/ItemflowExt.java" />
-        <option value="$PROJECT_DIR$/../ssyManager/src/main/java/com/wande/ssy/control/ItemFlowController.java" />
-        <option value="$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dao/AreaDao.java" />
-        <option value="$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dao/impl/AreaDaoImpl.java" />
-        <option value="$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dao/ItemDao.java" />
         <option value="$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dao/impl/ItemDaoImpl.java" />
         <option value="$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dubbo/provider/service/impl/ItemServiceImpl.java" />
         <option value="$PROJECT_DIR$/../ssyResourceApi/src/main/java/com/wande/ssy/entity/Item.java" />
@@ -280,6 +233,39 @@
         <option value="$PROJECT_DIR$/../ssyResourceApi/src/main/java/com/wande/ssy/enums/ItemStatus.java" />
         <option value="$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dubbo/provider/service/impl/AreaServiceImpl.java" />
         <option value="$PROJECT_DIR$/../ssyManager/src/main/java/com/wande/ssy/control/MobileController.java" />
+        <option value="$PROJECT_DIR$/../ssyResourceApi/src/main/java/com/wande/ssy/entity/AdminExt.java" />
+        <option value="$PROJECT_DIR$/../ssyResourceApi/src/main/java/com/wande/ssy/utils/SidUtil.java" />
+        <option value="$PROJECT_DIR$/../ssyResourceApi/src/main/java/com/wande/ssy/entity/Admin.java" />
+        <option value="$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dao/impl/AdminDaoImpl.java" />
+        <option value="$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dao/AdminDao.java" />
+        <option value="$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dubbo/provider/service/impl/AdminServImpl.java" />
+        <option value="$PROJECT_DIR$/../ssyManager/src/main/java/com/wande/ssy/control/AreaController.java" />
+        <option value="$PROJECT_DIR$/../ssyManager/src/main/java/com/wande/ssy/control/EqpController.java" />
+        <option value="$PROJECT_DIR$/../ssyManager/src/main/java/com/wande/ssy/control/EqpSortController.java" />
+        <option value="$PROJECT_DIR$/../ssyManager/src/main/java/com/wande/ssy/control/IndexController.java" />
+        <option value="$PROJECT_DIR$/../ssyManager/src/main/java/com/wande/ssy/control/ItemController.java" />
+        <option value="$PROJECT_DIR$/../ssyManager/src/main/java/com/wande/ssy/control/ItemFlowController.java" />
+        <option value="$PROJECT_DIR$/../ssyManager/src/main/java/com/wande/ssy/control/ItemRepairController.java" />
+        <option value="$PROJECT_DIR$/../ssyManager/src/main/java/com/wande/ssy/control/OrgController.java" />
+        <option value="$PROJECT_DIR$/../ssyManager/src/main/java/com/wande/ssy/control/QrcodeController.java" />
+        <option value="$PROJECT_DIR$/../ssyManager/src/main/java/com/wande/ssy/control/RegionController.java" />
+        <option value="$PROJECT_DIR$/../ssyManager/src/main/java/com/wande/ssy/control/SupplierController.java" />
+        <option value="$PROJECT_DIR$/../ssyManager/src/main/java/com/wande/ssy/control/UserController.java" />
+        <option value="$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dubbo/provider/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/../ssyManager/src/main/java/com/wande/ssy/control/AdminController.java" />
+        <option value="$PROJECT_DIR$/../ssyResourceApi/src/main/java/com/wande/ssy/utils/BeanUtil.java" />
+        <option value="$PROJECT_DIR$/../ssyManager/src/main/java/com/wande/ssy/control/LoginController.java" />
+        <option value="$PROJECT_DIR$/../ssyResourceApi/src/main/java/com/wande/ssy/utils/qiniu/FileUtil.java" />
+        <option value="$PROJECT_DIR$/../ssyResourceApi/pom.xml" />
+        <option value="$PROJECT_DIR$/../ssyResourceApi/src/main/java/com/wande/ssy/utils/qiniu/QiniuUtil.java" />
+        <option value="$PROJECT_DIR$/../ssyResourceApi/src/main/java/com/wande/ssy/utils/UploadMsg.java" />
+        <option value="$PROJECT_DIR$/../ssyResourceApi/src/main/java/com/wande/ssy/utils/UploadUtil.java" />
+        <option value="$PROJECT_DIR$/../ssyManager/src/main/java/com/wande/ssy/utils/ServletUtil.java" />
+        <option value="$PROJECT_DIR$/../ssyResourceApi/src/main/java/com/wande/ssy/utils/UploadConfig.java" />
+        <option value="$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/utils/UploadUtil.java" />
+        <option value="$PROJECT_DIR$/../ssyManager/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/../ssyManager/src/main/java/com/wande/ssy/control/UploadController.java" />
+        <option value="$PROJECT_DIR$/../ssyManager/src/main/java/com/wande/ssy/aspect/ExecutionTimeAspect.java" />
       </list>
     </option>
   </component>
@@ -308,7 +294,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -329,8 +315,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -403,8 +387,7 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="wande" type="462c0819:PsiDirectoryNode" />
               <item name="ssy" type="462c0819:PsiDirectoryNode" />
-              <item name="aspect" type="462c0819:PsiDirectoryNode" />
-              <item name="ExecutionTimeAspect" type="1a9f42e2:ClassTreeNode" />
+              <item name="control" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ssyParent" type="b2602c69:ProjectViewProjectNode" />
@@ -415,7 +398,19 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="wande" type="462c0819:PsiDirectoryNode" />
               <item name="ssy" type="462c0819:PsiDirectoryNode" />
-              <item name="control" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssyParent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssyManager" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="wande" type="462c0819:PsiDirectoryNode" />
+              <item name="ssy" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="ServletUtil" type="1a9f42e2:ClassTreeNode" />
             </path>
             <path>
               <item name="ssyParent" type="b2602c69:ProjectViewProjectNode" />
@@ -428,228 +423,14 @@
               <item name="ssyParent" type="b2602c69:ProjectViewProjectNode" />
               <item name="ssyParent" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="ssyParent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssyResource" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ssyParent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssyResource" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ssyParent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssyResource" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ssyParent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssyResource" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ssyParent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssyResource" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ssyParent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssyResource" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="wande" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ssyParent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssyResource" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="wande" type="462c0819:PsiDirectoryNode" />
-              <item name="ssy" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ssyParent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssyResource" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="wande" type="462c0819:PsiDirectoryNode" />
-              <item name="ssy" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ssyParent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssyResource" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="wande" type="462c0819:PsiDirectoryNode" />
-              <item name="ssy" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ssyParent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssyResource" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="wande" type="462c0819:PsiDirectoryNode" />
-              <item name="ssy" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ssyParent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssyResource" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="wande" type="462c0819:PsiDirectoryNode" />
-              <item name="ssy" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-              <item name="EqpDaoImpl" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="ssyParent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssyResource" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="wande" type="462c0819:PsiDirectoryNode" />
-              <item name="ssy" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-              <item name="ItemDaoImpl" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="ssyParent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssyResource" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="wande" type="462c0819:PsiDirectoryNode" />
-              <item name="ssy" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-              <item name="ItemrepairDaoImpl" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="ssyParent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssyResource" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ssyParent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssyResourceApi" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ssyParent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssyResourceApi" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ssyParent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssyResourceApi" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ssyParent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssyResourceApi" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ssyParent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssyResourceApi" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ssyParent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssyResourceApi" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="wande" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ssyParent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssyResourceApi" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="wande" type="462c0819:PsiDirectoryNode" />
-              <item name="ssy" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ssyParent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssyResourceApi" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="wande" type="462c0819:PsiDirectoryNode" />
-              <item name="ssy" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ssyParent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssyResourceApi" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="wande" type="462c0819:PsiDirectoryNode" />
-              <item name="ssy" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-              <item name="Admin" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="ssyParent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssyResourceApi" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="wande" type="462c0819:PsiDirectoryNode" />
-              <item name="ssy" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ssyParent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -679,11 +460,11 @@
       <recent name="com.wande.ssy.dubbo.provider.service.impl" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Administrator\Desktop\伍壹科技资料\ssy_springboot\ssyManager\src\main\java\com\wande\ssy" />
-      <recent name="C:\Users\Administrator\Desktop\伍壹科技资料\ssy_springboot\ssyManager\src\main\resources" />
       <recent name="C:\Users\Administrator\Desktop\伍壹科技资料\ssy_springboot\ssyManager\src\main\java\com\wande\ssy\utils" />
       <recent name="C:\Users\Administrator\Desktop\伍壹科技资料\ssy_springboot\ssyResourceApi\src\main\java\com\wande\ssy\utils" />
-      <recent name="C:\Users\Administrator\Desktop\伍壹科技资料\ssy_springboot\ssyResource\src\main\java\com\wande\ssy\utils" />
+      <recent name="C:\Users\Administrator\Desktop\伍壹科技资料\ssy_springboot\ssyResourceApi\src\main\java\com\wande\ssy\entity" />
+      <recent name="C:\Users\Administrator\Desktop\伍壹科技资料\ssy_springboot\ssyManager\src\main\java\com\wande\ssy" />
+      <recent name="C:\Users\Administrator\Desktop\伍壹科技资料\ssy_springboot\ssyManager\src\main\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -698,7 +479,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ResourceApplication">
+  <component name="RunManager" selected="Spring Boot.ManagerApplication">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -921,6 +702,8 @@
       <workItem from="1538010839311" duration="9265000" />
       <workItem from="1538035863173" duration="5333000" />
       <workItem from="1538096766321" duration="25876000" />
+      <workItem from="1538960719453" duration="23044000" />
+      <workItem from="1539047133689" duration="17607000" />
     </task>
     <servers />
   </component>
@@ -930,7 +713,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="474600000" />
+    <option name="totallyTimeSpent" value="515251000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -942,7 +725,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="1" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17264573" sideWeight="0.5193133" order="7" side_tool="true" content_ui="tabs" />
@@ -954,17 +738,17 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32623318" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.543722" sideWeight="0.49087983" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6883408" sideWeight="0.49785408" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20067264" sideWeight="0.49087983" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14798206" sideWeight="0.49785408" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295964" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40246636" sideWeight="0.4806867" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24327354" sideWeight="0.4806867" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295964" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29613733" sideWeight="0.49457365" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30472103" sideWeight="0.49457365" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2886266" sideWeight="0.50542635" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -994,549 +778,441 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../ssyResourceApi/src/main/java/com/wande/ssy/dubbo/provider/service/UserService.java">
+    <entry file="file://$PROJECT_DIR$/../ssyResourceApi/src/main/java/com/wande/ssy/entity/AdminExt.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2904">
-          <caret line="95" column="34" lean-forward="false" selection-start-line="95" selection-start-column="34" selection-end-line="95" selection-end-column="34" />
+        <state relative-caret-position="226">
+          <caret line="8" column="33" lean-forward="false" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/jfinal/jfinal/3.3/jfinal-3.3.jar!/com/jfinal/plugin/activerecord/Db.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="204" column="22" lean-forward="false" selection-start-line="204" selection-start-column="22" selection-end-line="204" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.32/tomcat-embed-core-8.5.32.jar!/javax/servlet/ServletRequest.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="15" column="11" lean-forward="false" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dubbo/provider/service/impl/UserServiceImpl.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.32/tomcat-embed-core-8.5.32.jar!/javax/servlet/http/Cookie.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3465">
-          <caret line="129" column="63" lean-forward="false" selection-start-line="129" selection-start-column="63" selection-end-line="129" selection-end-column="63" />
+        <state relative-caret-position="168">
+          <caret line="77" column="18" lean-forward="false" selection-start-line="77" selection-start-column="18" selection-end-line="77" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dao/impl/AdminDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="31" column="17" lean-forward="false" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dao/AdminDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="16" column="17" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ssyResourceApi/src/main/java/com/wande/ssy/utils/SidUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="48" column="15" lean-forward="false" selection-start-line="48" selection-start-column="15" selection-end-line="48" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ssyResourceApi/src/main/java/com/wande/ssy/entity/Admin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="139" column="35" lean-forward="true" selection-start-line="139" selection-start-column="35" selection-end-line="139" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ssyResourceApi/src/main/java/com/wande/ssy/dubbo/provider/service/AdminService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="41" column="30" lean-forward="false" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dubbo/provider/service/impl/AdminServImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-534">
+          <caret line="125" column="5" lean-forward="true" selection-start-line="125" selection-start-column="5" selection-end-line="125" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dao/UserDao.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/aspectj/aspectjweaver/1.8.13/aspectjweaver-1.8.13.jar!/org/aspectj/lang/annotation/Around.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="34" column="20" lean-forward="false" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
+        <state relative-caret-position="66">
+          <caret line="5" column="31" lean-forward="false" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ssyManager/src/main/java/com/wande/ssy/control/EqpSortController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="124" column="86" lean-forward="false" selection-start-line="124" selection-start-column="86" selection-end-line="124" selection-end-column="86" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dao/impl/UserDaoImpl.java">
+    <entry file="file://$PROJECT_DIR$/../ssyManager/src/main/java/com/wande/ssy/control/IndexController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3168">
-          <caret line="111" column="27" lean-forward="false" selection-start-line="111" selection-start-column="27" selection-end-line="111" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/dubbo/2.5.3/dubbo-2.5.3.jar!/com/alibaba/dubbo/remoting/exchange/support/DefaultFuture.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+        <state relative-caret-position="99">
+          <caret line="326" column="86" lean-forward="false" selection-start-line="326" selection-start-column="86" selection-end-line="326" selection-end-column="86" />
           <folding>
-            <marker date="1531995402836" expanded="false" signature="0:104" ph="/.../" />
-            <marker date="1531995402836" expanded="false" signature="167:959" ph="..." />
-            <marker date="1531995402836" expanded="true" signature="1704:2084" ph="{...}" />
-            <marker date="1531995402836" expanded="true" signature="2135:2181" ph="{...}" />
-            <marker date="1531995402836" expanded="true" signature="2243:3111" ph="{...}" />
-            <marker date="1531995402836" expanded="true" signature="3138:3377" ph="{...}" />
-            <marker date="1531995402836" expanded="false" signature="3406:3417" ph=" { " />
-            <marker date="1531995402836" expanded="false" signature="3446:3452" ph=" }" />
-            <marker date="1531995402836" expanded="true" signature="3509:4025" ph="{...}" />
-            <marker date="1531995402836" expanded="true" signature="4079:5646" ph="{...}" />
-            <marker date="1531995402836" expanded="true" signature="5713:6211" ph="{...}" />
-            <marker date="1531995402836" expanded="false" signature="6237:6248" ph=" { " />
-            <marker date="1531995402836" expanded="false" signature="6263:6269" ph=" }" />
-            <marker date="1531995402836" expanded="false" signature="6303:6314" ph=" { " />
-            <marker date="1531995402836" expanded="false" signature="6334:6340" ph=" }" />
-            <marker date="1531995402836" expanded="false" signature="6370:6381" ph=" { " />
-            <marker date="1531995402836" expanded="false" signature="6403:6409" ph=" }" />
-            <marker date="1531995402836" expanded="false" signature="6442:6453" ph=" { " />
-            <marker date="1531995402836" expanded="false" signature="6473:6479" ph=" }" />
-            <marker date="1531995402836" expanded="false" signature="6509:6520" ph=" { " />
-            <marker date="1531995402836" expanded="false" signature="6540:6546" ph=" }" />
-            <marker date="1531995402836" expanded="false" signature="6584:6595" ph=" { " />
-            <marker date="1531995402836" expanded="false" signature="6613:6619" ph=" }" />
-            <marker date="1531995402836" expanded="false" signature="6671:6682" ph=" { " />
-            <marker date="1531995402836" expanded="false" signature="6720:6726" ph=" }" />
-            <marker date="1531995402836" expanded="false" signature="6780:6791" ph=" { " />
-            <marker date="1531995402836" expanded="false" signature="6830:6836" ph=" }" />
-            <marker date="1531995402836" expanded="true" signature="6900:7053" ph="{...}" />
-            <marker date="1531995402836" expanded="false" signature="7080:7091" ph=" { " />
-            <marker date="1531995402836" expanded="false" signature="7130:7136" ph=" }" />
-            <marker date="1531995402836" expanded="true" signature="7206:7782" ph="{...}" />
-            <marker date="1531995402836" expanded="true" signature="7826:8153" ph="{...}" />
-            <marker date="1531995402836" expanded="true" signature="8206:8941" ph="{...}" />
-            <marker date="1531995402836" expanded="true" signature="8954:9125" ph="{...}" />
-            <marker date="1531995402836" expanded="true" signature="9202:10336" ph="{...}" />
-            <marker date="1531995402836" expanded="true" signature="9252:9263" ph="{}" />
-            <marker date="1531995402836" expanded="true" signature="9291:10330" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/commons-beanutils/commons-beanutils/1.9.2/commons-beanutils-1.9.2.jar!/org/apache/commons/beanutils/PropertyUtilsBean.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-82">
-          <caret line="369" column="18" lean-forward="false" selection-start-line="369" selection-start-column="18" selection-end-line="369" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/wande/ynm3k/1.0/ynm3k-1.0.jar!/com/ynm3k/mvc/model/DataPage.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="31" column="19" lean-forward="false" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/jfinal/jfinal/3.3/jfinal-3.3.jar!/com/jfinal/plugin/activerecord/Record.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ssyResourceApi/src/main/java/com/wande/ssy/entity/ItemrepairExt.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1220">
-          <caret line="153" column="27" lean-forward="false" selection-start-line="153" selection-start-column="19" selection-end-line="153" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ssyResourceApi/src/main/java/com/wande/ssy/utils/BeanUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="215" column="0" lean-forward="false" selection-start-line="215" selection-start-column="0" selection-end-line="215" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ssyManager/src/main/java/com/wande/ssy/aspect/ExecutionTimeAspect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/wande/ynm3k/1.0/ynm3k-1.0.jar!/com/ynm3k/mvc/model/RespWrapper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="57" column="13" lean-forward="false" selection-start-line="57" selection-start-column="13" selection-end-line="57" selection-end-column="13" />
-          <folding>
-            <element signature="e#1587#1588#0" expanded="true" />
-            <element signature="e#1618#1619#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ssyResourceApi/src/main/java/com/wande/ssy/dubbo/provider/service/BrokenreasonService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="22" column="37" lean-forward="false" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dubbo/provider/service/impl/BrokenreasonServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="20" column="37" lean-forward="false" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ssyResourceApi/src/main/java/com/wande/ssy/entity/ItemFlow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="225" column="18" lean-forward="false" selection-start-line="225" selection-start-column="18" selection-end-line="225" selection-end-column="18" />
-          <folding>
-            <element signature="e#2509#2510#0" expanded="true" />
-            <element signature="e#2547#2548#0" expanded="true" />
-            <element signature="e#5066#5067#0" expanded="true" />
-            <element signature="e#5102#5103#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ssyResourceApi/src/main/java/com/wande/ssy/entity/ItemflowExt.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1749">
-          <caret line="13" column="39" lean-forward="true" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
-          <folding>
-            <element signature="e#1403#1404#0" expanded="true" />
-            <element signature="e#1432#1433#0" expanded="true" />
-            <element signature="e#2162#2163#0" expanded="true" />
-            <element signature="e#2193#2194#0" expanded="true" />
-            <element signature="e#4133#4134#0" expanded="true" />
-            <element signature="e#4173#4174#0" expanded="true" />
-            <element signature="e#4453#4454#0" expanded="true" />
-            <element signature="e#4491#4492#0" expanded="true" />
-            <element signature="e#4543#4544#0" expanded="true" />
-            <element signature="e#4587#4588#0" expanded="true" />
-            <element signature="e#4639#4640#0" expanded="true" />
-            <element signature="e#4683#4684#0" expanded="true" />
-            <element signature="e#4729#4730#0" expanded="true" />
-            <element signature="e#4767#4768#0" expanded="true" />
-            <element signature="e#4817#4818#0" expanded="true" />
-            <element signature="e#4859#4860#0" expanded="true" />
-            <element signature="e#4915#4916#0" expanded="true" />
-            <element signature="e#4963#4964#0" expanded="true" />
-            <element signature="e#5023#5024#0" expanded="true" />
-            <element signature="e#5075#5076#0" expanded="true" />
-            <element signature="e#5123#5124#0" expanded="true" />
-            <element signature="e#5163#5164#0" expanded="true" />
-            <element signature="e#5221#5222#0" expanded="true" />
-            <element signature="e#5271#5272#0" expanded="true" />
-            <element signature="e#5331#5332#0" expanded="true" />
-            <element signature="e#5383#5384#0" expanded="true" />
-            <element signature="e#5435#5436#0" expanded="true" />
-            <element signature="e#5479#5480#0" expanded="true" />
-            <element signature="e#5527#5528#0" expanded="true" />
-            <element signature="e#5567#5568#0" expanded="true" />
-            <element signature="e#5619#5620#0" expanded="true" />
-            <element signature="e#5663#5664#0" expanded="true" />
-            <element signature="e#5717#5718#0" expanded="true" />
-            <element signature="e#5763#5764#0" expanded="true" />
-            <element signature="e#5817#5818#0" expanded="true" />
-            <element signature="e#5863#5864#0" expanded="true" />
-            <element signature="e#5915#5916#0" expanded="true" />
-            <element signature="e#5959#5960#0" expanded="true" />
-            <element signature="e#6011#6012#0" expanded="true" />
-            <element signature="e#6055#6056#0" expanded="true" />
-            <element signature="e#6109#6110#0" expanded="true" />
-            <element signature="e#6155#6156#0" expanded="true" />
-            <element signature="e#6207#6208#0" expanded="true" />
-            <element signature="e#6251#6252#0" expanded="true" />
-            <element signature="e#6311#6312#0" expanded="true" />
-            <element signature="e#6363#6364#0" expanded="true" />
-            <element signature="e#6415#6416#0" expanded="true" />
-            <element signature="e#6459#6460#0" expanded="true" />
+            <element signature="e#2340#2355#0" expanded="false" />
+            <element signature="e#3581#3596#0" expanded="false" />
+            <element signature="e#3985#3999#0" expanded="false" />
+            <element signature="e#4558#4590#1" expanded="false" />
+            <element signature="e#4963#4974#0" expanded="false" />
+            <element signature="e#6295#6310#0" expanded="false" />
+            <element signature="e#8205#8220#0" expanded="false" />
+            <element signature="e#9595#9611#0" expanded="false" />
+            <element signature="e#10514#10522#0" expanded="false" />
+            <element signature="e#10571#10579#0" expanded="false" />
+            <element signature="e#10630#10638#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../ssyManager/src/main/java/com/wande/ssy/control/ItemFlowController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="259" column="0" lean-forward="true" selection-start-line="259" selection-start-column="0" selection-end-line="259" selection-end-column="0" />
-          <folding>
-            <element signature="e#3490#3505#0" expanded="true" />
-            <element signature="e#4373#4382#0" expanded="true" />
-            <element signature="e#4426#4432#0" expanded="true" />
-            <element signature="e#4482#4491#0" expanded="true" />
-            <element signature="e#4540#4549#0" expanded="true" />
-            <element signature="e#4595#4604#0" expanded="true" />
-            <element signature="e#4649#4658#0" expanded="true" />
-            <element signature="e#4708#4717#0" expanded="true" />
-            <element signature="e#4760#4766#0" expanded="true" />
-            <element signature="e#8841#8862#0" expanded="true" />
-            <element signature="e#14115#14130#0" expanded="true" />
-            <element signature="e#14970#14979#0" expanded="true" />
-            <element signature="e#15023#15029#0" expanded="true" />
-            <element signature="e#15079#15088#0" expanded="true" />
-            <element signature="e#15137#15146#0" expanded="true" />
-            <element signature="e#15192#15201#0" expanded="true" />
-            <element signature="e#15246#15255#0" expanded="true" />
-            <element signature="e#15305#15314#0" expanded="true" />
-            <element signature="e#15357#15363#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="194">
+          <caret line="265" column="86" lean-forward="false" selection-start-line="265" selection-start-column="86" selection-end-line="265" selection-end-column="86" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ssyManager/src/main/java/com/wande/ssy/control/OrgController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="134" column="0" lean-forward="true" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ssyManager/src/main/java/com/wande/ssy/control/RegionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="159" column="86" lean-forward="false" selection-start-line="159" selection-start-column="86" selection-end-line="159" selection-end-column="86" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ssyManager/src/main/java/com/wande/ssy/control/SupplierController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="135" column="86" lean-forward="false" selection-start-line="135" selection-start-column="86" selection-end-line="135" selection-end-column="86" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ssyManager/src/main/java/com/wande/ssy/control/QrcodeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="237" column="0" lean-forward="true" selection-start-line="237" selection-start-column="0" selection-end-line="237" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../ssyManager/src/main/java/com/wande/ssy/control/ItemRepairController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="296" column="14" lean-forward="true" selection-start-line="296" selection-start-column="14" selection-end-line="296" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ssyManager/src/main/java/com/wande/ssy/control/MsgController.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
-          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <caret line="25" column="35" lean-forward="true" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ssyManager/src/main/java/com/wande/ssy/control/ssobileController.java">
+    <entry file="file://$PROJECT_DIR$/../ssyManager/src/main/java/com/wande/ssy/control/EqpController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="2" column="30" lean-forward="false" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+        <state relative-caret-position="2145">
+          <caret line="150" column="0" lean-forward="true" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dao/AreaDao.java">
+    <entry file="file://$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dubbo/provider/service/impl/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="31" column="9" lean-forward="false" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+        <state relative-caret-position="161">
+          <caret line="43" column="11" lean-forward="false" selection-start-line="43" selection-start-column="11" selection-end-line="43" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dao/impl/AreaDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="145" column="16" lean-forward="false" selection-start-line="145" selection-start-column="16" selection-end-line="145" selection-end-column="16" />
-          <folding>
-            <element signature="e#4653#4654#0" expanded="true" />
-            <element signature="e#4699#4700#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dao/impl/ItemDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="152" column="7" lean-forward="true" selection-start-line="152" selection-start-column="7" selection-end-line="152" selection-end-column="7" />
-          <folding>
-            <element signature="e#4872#4873#0" expanded="true" />
-            <element signature="e#4923#4924#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dao/ItemDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="17" column="9" lean-forward="false" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ssyResourceApi/src/main/java/com/wande/ssy/dubbo/provider/service/EqpService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="42" column="28" lean-forward="false" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dubbo/provider/service/impl/EqpServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="57" column="28" lean-forward="false" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ssyResourceApi/src/main/java/com/wande/ssy/dubbo/provider/service/ItemService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="49" column="29" lean-forward="false" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dubbo/provider/service/impl/ItemServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="46" column="29" lean-forward="false" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ssyResourceApi/src/main/java/com/wande/ssy/entity/Item.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2487">
-          <caret line="153" column="5" lean-forward="true" selection-start-line="153" selection-start-column="5" selection-end-line="153" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dubbo/provider/service/impl/ItemflowServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="21" column="32" lean-forward="false" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dao/impl/ItemFlowDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="168" column="6" lean-forward="false" selection-start-line="168" selection-start-column="6" selection-end-line="168" selection-end-column="6" />
-          <folding>
-            <element signature="e#6686#6687#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ssyResourceApi/src/main/java/com/wande/ssy/dubbo/provider/service/ItemflowService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="26" column="32" lean-forward="false" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dao/ItemFlowDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ssyResourceApi/src/main/java/com/wande/ssy/dubbo/provider/service/AreaflowService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="20" column="32" lean-forward="false" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dubbo/provider/service/impl/AreaflowServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="22" column="33" lean-forward="false" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dao/AreaFlowDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="7" column="16" lean-forward="false" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dao/impl/AreaFlowDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="9" column="41" lean-forward="true" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
-          <folding>
-            <element signature="e#313#314#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ssyResourceApi/src/main/java/com/wande/ssy/dubbo/provider/service/ItemrepairService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="25" column="32" lean-forward="false" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dubbo/provider/service/impl/ItemrepairServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="23" column="34" lean-forward="false" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dao/ItemrepairDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ssyResourceApi/src/main/java/com/wande/ssy/entity/ItemRepair.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3920">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding>
-            <element signature="e#3145#3146#0" expanded="true" />
-            <element signature="e#3184#3185#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dao/impl/ItemrepairDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="116" column="26" lean-forward="true" selection-start-line="116" selection-start-column="26" selection-end-line="116" selection-end-column="26" />
-          <folding>
-            <element signature="e#4381#4382#0" expanded="true" />
-            <element signature="e#4439#4440#0" expanded="true" />
-            <element signature="e#4562#4563#0" expanded="true" />
-            <element signature="e#4595#4596#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ssyResourceApi/src/main/java/com/wande/ssy/dubbo/provider/service/MsgService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dubbo/provider/service/impl/MsgServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="20" column="27" lean-forward="false" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dao/MsgDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" column="11" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ssyResourceApi/src/main/java/com/wande/ssy/entity/Msg.java">
+    <entry file="file://$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/utils/ServletUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <caret line="6" column="42" lean-forward="false" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ssyManager/src/main/java/com/wande/ssy/control/AdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-653">
+          <caret line="251" column="57" lean-forward="false" selection-start-line="251" selection-start-column="57" selection-end-line="251" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dao/impl/MsgDaoImpl.java">
+    <entry file="file://$PROJECT_DIR$/../ssyManager/src/main/java/com/wande/ssy/control/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="30" column="28" lean-forward="false" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
-          <folding>
-            <element signature="e#1014#1015#0" expanded="true" />
-            <element signature="e#1047#1048#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ssyResourceApi/src/main/java/com/wande/ssy/enums/ItemStatus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="12" column="37" lean-forward="true" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
-          <folding>
-            <element signature="e#445#446#0" expanded="true" />
-            <element signature="e#464#465#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ssyResourceApi/src/main/java/com/wande/ssy/dubbo/provider/service/AreaService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="79" column="44" lean-forward="false" selection-start-line="79" selection-start-column="44" selection-end-line="79" selection-end-column="44" />
+        <state relative-caret-position="-334">
+          <caret line="152" column="57" lean-forward="false" selection-start-line="152" selection-start-column="57" selection-end-line="152" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dubbo/provider/service/impl/AreaServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/../ssyManager/src/main/java/com/wande/ssy/control/ItemController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2035">
-          <caret line="127" column="32" lean-forward="true" selection-start-line="127" selection-start-column="32" selection-end-line="127" selection-end-column="32" />
+        <state relative-caret-position="349">
+          <caret line="173" column="47" lean-forward="false" selection-start-line="173" selection-start-column="25" selection-end-line="173" selection-end-column="47" />
+          <folding>
+            <element signature="e#2734#2749#0" expanded="false" />
+            <element signature="e#3473#3481#0" expanded="false" />
+            <element signature="e#3528#3536#0" expanded="false" />
+            <element signature="e#3583#3591#0" expanded="false" />
+            <element signature="e#3643#3651#0" expanded="false" />
+            <element signature="e#3702#3710#0" expanded="false" />
+            <element signature="e#3759#3767#0" expanded="false" />
+            <element signature="e#3815#3823#0" expanded="false" />
+            <element signature="e#7996#8017#0" expanded="false" />
+            <element signature="e#10223#10234#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ssyResourceApi/src/main/java/com/wande/ssy/utils/BeanUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="203" column="4" lean-forward="true" selection-start-line="203" selection-start-column="4" selection-end-line="203" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ssyManager/src/main/java/com/wande/ssy/control/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="70" column="7" lean-forward="false" selection-start-line="70" selection-start-column="7" selection-end-line="70" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ssyResourceApi/src/main/java/com/wande/ssy/utils/qiniu/QiniuUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-523">
+          <caret line="56" column="38" lean-forward="false" selection-start-line="56" selection-start-column="38" selection-end-line="56" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ssyResourceApi/src/main/java/com/wande/ssy/utils/qiniu/FileUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="15" column="60" lean-forward="false" selection-start-line="15" selection-start-column="60" selection-end-line="15" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ssyResourceApi/src/main/java/com/wande/ssy/utils/ValidateUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ssyResource/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="12" column="6" lean-forward="false" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ssyResourceApi/src/main/java/com/wande/ssy/utils/UploadMsg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="37" column="18" lean-forward="false" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
+          <folding>
+            <element signature="e#436#437#0" expanded="false" />
+            <element signature="e#457#458#0" expanded="false" />
+            <element signature="e#671#672#0" expanded="false" />
+            <element signature="e#688#689#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/java/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="2131" column="19" lean-forward="false" selection-start-line="2131" selection-start-column="19" selection-end-line="2131" selection-end-column="19" />
+          <folding>
+            <element signature="e#82971#82972#0" expanded="false" />
+            <element signature="e#83020#83021#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ssyManager/src/main/resources/dubbo-service-manager.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/dubbo/provider/service/impl/QrcodeServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ssyManager/src/main/java/com/wande/ssy/utils/ServletUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../51eq/website/src/main/java/com/wandeyun/wuyi/website/controller/FileUPController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1350">
+          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/commons-fileupload/commons-fileupload/1.3.3/commons-fileupload-1.3.3.jar!/org/apache/commons/fileupload/FileUploadBase.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="48" column="32" lean-forward="false" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/commons-fileupload/commons-fileupload/1.3.3/commons-fileupload-1.3.3.jar!/org/apache/commons/fileupload/disk/DiskFileItemFactory.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="18" column="11" lean-forward="false" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+          <folding>
+            <element signature="e#593#594#0" expanded="true" />
+            <element signature="e#632#633#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ssyResourceApi/src/main/java/com/wande/ssy/utils/UploadUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="380" column="56" lean-forward="true" selection-start-line="380" selection-start-column="56" selection-end-line="380" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#942#958#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ssyManager/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ssyResourceApi/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1386">
+          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ssyResourceApi/src/main/java/com/wande/ssy/utils/UploadConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.8.RELEASE/spring-web-5.0.8.RELEASE.jar!/org/springframework/web/multipart/MultipartHttpServletRequest.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ssyResource/src/main/java/com/wande/ssy/utils/UploadUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2788">
+          <caret line="31" column="4" lean-forward="true" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/commons-fileupload/commons-fileupload/1.3.3/commons-fileupload-1.3.3.jar!/org/apache/commons/fileupload/servlet/ServletFileUpload.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="693">
+          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ssyManager/src/main/java/com/wande/ssy/control/UploadController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="112" column="37" lean-forward="true" selection-start-line="112" selection-start-column="37" selection-end-line="112" selection-end-column="37" />
+          <folding>
+            <element signature="e#1066#1085#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ssyManager/src/main/java/com/wande/ssy/utils/PathUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-837">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ssyManager/src/main/java/com/wande/ssy/control/AreaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="91" column="22" lean-forward="true" selection-start-line="91" selection-start-column="22" selection-end-line="91" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../ssyManager/src/main/java/com/wande/ssy/control/MobileController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="250" column="9" lean-forward="true" selection-start-line="250" selection-start-column="9" selection-end-line="250" selection-end-column="9" />
+        <state relative-caret-position="396">
+          <caret line="121" column="28" lean-forward="false" selection-start-line="121" selection-start-column="22" selection-end-line="121" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ssyManager/src/main/java/com/wande/ssy/aspect/ExecutionTimeAspect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="249" column="63" lean-forward="false" selection-start-line="249" selection-start-column="44" selection-end-line="249" selection-end-column="63" />
           <folding />
         </state>
       </provider>
@@ -1595,7 +1271,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>ssyApp</last-edited>
+          <last-edited>ssyResourceApi</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

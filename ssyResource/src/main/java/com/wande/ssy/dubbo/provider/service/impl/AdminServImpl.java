@@ -5,10 +5,13 @@ import com.wande.ssy.dao.AdminDao;
 import com.wande.ssy.dao.RegionagencyDao;
 import com.wande.ssy.dubbo.provider.service.AdminService;
 import com.wande.ssy.entity.Admin;
+import com.wande.ssy.entity.AdminExt;
 import com.wande.ssy.entity.RegionAgency;
 import com.wande.ssy.enums.AdminRole;
 import com.wande.ssy.enums.AdminStatus;
 import com.wande.ssy.utils.CopyPropertiesUtils;
+import com.wande.ssy.utils.SidUtil;
+import com.wande.ssy.utils.StringUtil;
 import com.ynm3k.mvc.model.DataPage;
 import com.ynm3k.mvc.model.RespWrapper;
 import com.ynm3k.utils.crypto.MD5Coding;
@@ -103,7 +106,23 @@ public class AdminServImpl implements AdminService {
 
     @Override
     public RespWrapper<Admin> getAdminBySid(String sid) {
-        return null;
+
+        if (StringUtil.isEmpty(sid) || sid.length() != 48) {
+            return RespWrapper.makeResp(1001, "sid不正确!", null);
+        }
+        try {
+            SidUtil.SidInfo info = SidUtil.decodeSid(sid);
+            Admin admin = adminDao.getOneAdmin(info.uin);
+            if (admin != null) {
+                return RespWrapper.makeResp(0, "", admin);
+            } else {
+                return RespWrapper.makeResp(1001, "该系统用户不存在!", null);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return RespWrapper.makeResp(1001, "系统繁忙!", null);
+
     }
 
     /* 根据uin获取用户
@@ -126,7 +145,26 @@ public class AdminServImpl implements AdminService {
 
     @Override
     public RespWrapper<String> login(String account, String password, String vCode) {
-        return null;
+
+        try {
+            AdminExt admin = adminDao.getOneAdminExt(account);
+            if (admin == null) {
+                return RespWrapper.makeResp(1001, "该系统用户不存在!", null);
+            }
+            String pwd = admin.getPwd();
+            if (!pwd.equals(MD5Coding.encode2HexStr(password.getBytes("UTF-8")))) {
+                return RespWrapper.makeResp(1001, "用户密码错误!", null);
+            }
+            if (admin.getStatus() != AdminStatus.NORMAL.getValue()) {
+                return RespWrapper.makeResp(1001, "该账号已被冻结!", null);
+            }
+            adminDao.updateLastLoginTime(admin.getUin());
+            String sid = SidUtil.createSid(admin.getUin(), admin.getSkey(), System.currentTimeMillis());
+            return RespWrapper.makeResp(0, "登录成功", sid);
+        } catch (Exception e) {
+            return RespWrapper.makeResp(1001, "系统繁忙!", null);
+        }
+
     }
 
     @Override
